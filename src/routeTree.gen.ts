@@ -9,8 +9,44 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UnternehmenRouteImport } from './routes/unternehmen'
+import { Route as InhouseRouteImport } from './routes/inhouse'
+import { Route as CoachingRouteImport } from './routes/coaching'
+import { Route as BootcampRouteImport } from './routes/bootcamp'
+import { Route as AusbildungRouteImport } from './routes/ausbildung'
+import { Route as AquafitnessRouteImport } from './routes/aquafitness'
 import { Route as IndexRouteImport } from './routes/index'
 
+const UnternehmenRoute = UnternehmenRouteImport.update({
+  id: '/unternehmen',
+  path: '/unternehmen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InhouseRoute = InhouseRouteImport.update({
+  id: '/inhouse',
+  path: '/inhouse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoachingRoute = CoachingRouteImport.update({
+  id: '/coaching',
+  path: '/coaching',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BootcampRoute = BootcampRouteImport.update({
+  id: '/bootcamp',
+  path: '/bootcamp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AusbildungRoute = AusbildungRouteImport.update({
+  id: '/ausbildung',
+  path: '/ausbildung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AquafitnessRoute = AquafitnessRouteImport.update({
+  id: '/aquafitness',
+  path: '/aquafitness',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +55,116 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aquafitness': typeof AquafitnessRoute
+  '/ausbildung': typeof AusbildungRoute
+  '/bootcamp': typeof BootcampRoute
+  '/coaching': typeof CoachingRoute
+  '/inhouse': typeof InhouseRoute
+  '/unternehmen': typeof UnternehmenRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aquafitness': typeof AquafitnessRoute
+  '/ausbildung': typeof AusbildungRoute
+  '/bootcamp': typeof BootcampRoute
+  '/coaching': typeof CoachingRoute
+  '/inhouse': typeof InhouseRoute
+  '/unternehmen': typeof UnternehmenRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aquafitness': typeof AquafitnessRoute
+  '/ausbildung': typeof AusbildungRoute
+  '/bootcamp': typeof BootcampRoute
+  '/coaching': typeof CoachingRoute
+  '/inhouse': typeof InhouseRoute
+  '/unternehmen': typeof UnternehmenRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/aquafitness'
+    | '/ausbildung'
+    | '/bootcamp'
+    | '/coaching'
+    | '/inhouse'
+    | '/unternehmen'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/aquafitness'
+    | '/ausbildung'
+    | '/bootcamp'
+    | '/coaching'
+    | '/inhouse'
+    | '/unternehmen'
+  id:
+    | '__root__'
+    | '/'
+    | '/aquafitness'
+    | '/ausbildung'
+    | '/bootcamp'
+    | '/coaching'
+    | '/inhouse'
+    | '/unternehmen'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AquafitnessRoute: typeof AquafitnessRoute
+  AusbildungRoute: typeof AusbildungRoute
+  BootcampRoute: typeof BootcampRoute
+  CoachingRoute: typeof CoachingRoute
+  InhouseRoute: typeof InhouseRoute
+  UnternehmenRoute: typeof UnternehmenRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/unternehmen': {
+      id: '/unternehmen'
+      path: '/unternehmen'
+      fullPath: '/unternehmen'
+      preLoaderRoute: typeof UnternehmenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inhouse': {
+      id: '/inhouse'
+      path: '/inhouse'
+      fullPath: '/inhouse'
+      preLoaderRoute: typeof InhouseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coaching': {
+      id: '/coaching'
+      path: '/coaching'
+      fullPath: '/coaching'
+      preLoaderRoute: typeof CoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bootcamp': {
+      id: '/bootcamp'
+      path: '/bootcamp'
+      fullPath: '/bootcamp'
+      preLoaderRoute: typeof BootcampRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ausbildung': {
+      id: '/ausbildung'
+      path: '/ausbildung'
+      fullPath: '/ausbildung'
+      preLoaderRoute: typeof AusbildungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aquafitness': {
+      id: '/aquafitness'
+      path: '/aquafitness'
+      fullPath: '/aquafitness'
+      preLoaderRoute: typeof AquafitnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +177,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AquafitnessRoute: AquafitnessRoute,
+  AusbildungRoute: AusbildungRoute,
+  BootcampRoute: BootcampRoute,
+  CoachingRoute: CoachingRoute,
+  InhouseRoute: InhouseRoute,
+  UnternehmenRoute: UnternehmenRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
