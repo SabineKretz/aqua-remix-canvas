@@ -1,0 +1,121 @@
+import { Link, Outlet, useLocation } from "@tanstack/react-router";
+import { useState } from "react";
+import { Menu, X, Waves } from "lucide-react";
+
+const nav = [
+  { to: "/", label: "Start" },
+  { to: "/aquafitness", label: "Aqua Fitness" },
+  { to: "/bootcamp", label: "Bootcamp" },
+  { to: "/ausbildung", label: "Ausbildung" },
+  { to: "/inhouse", label: "Inhouse" },
+  { to: "/coaching", label: "BGM" },
+  { to: "/unternehmen", label: "Unternehmen" },
+] as const;
+
+export function SiteLayout() {
+  const [open, setOpen] = useState(false);
+  const loc = useLocation();
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background">
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 h-18 flex items-center justify-between py-4">
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="size-10 rounded-2xl bg-gradient-hero grid place-items-center shadow-soft group-hover:scale-105 transition-transform">
+              <Waves className="size-5 text-primary-foreground" />
+            </div>
+            <div className="leading-tight">
+              <div className="font-display font-bold text-lg">aqua-magic</div>
+              <div className="text-[10px] tracking-widest uppercase text-muted-foreground">Deutschland · seit 1997</div>
+            </div>
+          </Link>
+          <nav className="hidden lg:flex items-center gap-1">
+            {nav.map((n) => {
+              const active = loc.pathname === n.to;
+              return (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
+                    active ? "bg-primary text-primary-foreground" : "text-foreground/70 hover:text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  {n.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <Link
+            to="/unternehmen"
+            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition shadow-soft"
+          >
+            Kontakt
+          </Link>
+          <button onClick={() => setOpen(!open)} className="lg:hidden p-2 rounded-lg hover:bg-secondary" aria-label="Menu">
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
+        {open && (
+          <div className="lg:hidden border-t border-border bg-background">
+            <div className="px-6 py-4 flex flex-col gap-1">
+              {nav.map((n) => (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  onClick={() => setOpen(false)}
+                  className="px-3 py-2.5 rounded-lg text-sm font-medium hover:bg-secondary"
+                >
+                  {n.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </header>
+
+      <main className="flex-1">
+        <Outlet />
+      </main>
+
+      <footer className="mt-24 border-t border-border bg-deep text-primary-foreground">
+        <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-10">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="size-10 rounded-2xl bg-gradient-hero grid place-items-center">
+                <Waves className="size-5 text-primary-foreground" />
+              </div>
+              <span className="font-display font-bold text-xl">aqua-magic</span>
+            </div>
+            <p className="text-sm text-primary-foreground/70 max-w-xs">
+              Ihr Partner für Gesundheit, Aqua Fitness und betriebliches Gesundheitsmanagement seit 1997.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Navigation</h4>
+            <ul className="space-y-2 text-sm text-primary-foreground/70">
+              {nav.map((n) => (
+                <li key={n.to}><Link to={n.to} className="hover:text-accent transition">{n.label}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Kontakt</h4>
+            <address className="not-italic text-sm text-primary-foreground/70 space-y-1">
+              <div>aqua-magic Deutschland</div>
+              <div>Ebracher Weg 24</div>
+              <div>D 97513 Michelau im Steigerwald</div>
+              <div className="pt-2">Natascha Woithe</div>
+              <div>Tel. 0172 / 9367279</div>
+            </address>
+          </div>
+        </div>
+        <div className="border-t border-primary-foreground/10">
+          <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-primary-foreground/50 flex flex-wrap justify-between gap-3">
+            <span>© {new Date().getFullYear()} aqua-magic Deutschland</span>
+            <span>„Was immer du tun kannst oder träumst es zu können, fang damit an." — Goethe</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
