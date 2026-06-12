@@ -7,7 +7,7 @@ export const Route = createFileRoute("/aquafitness")({
   head: () => ({
     meta: [
       { title: "Aqua Fitness Kurse – aqua-magic Deutschland" },
-      { name: "description", content: "Fitness im Wasser für jedes Alter. Gelenkschonend, effektiv und voller Spaß. Kurse in Dittelbrunn, Sennfeld, Schwebheim und Volkach." },
+      { name: "description", content: "Fitness im Wasser für jedes Alter. Gelenkschonend, effektiv und voller Spaß. An verschiedenen Standorten und auf Anfrage auch bei Ihnen." },
     ],
   }),
   component: Page,
@@ -22,7 +22,7 @@ const benefits = [
   "Echter Kalorienkiller — Fitness mit Spaßfaktor",
 ];
 
-const locations = ["Dittelbrunn", "Sennfeld", "Schwebheim", "Volkach"];
+
 
 function Page() {
   return (
@@ -62,20 +62,22 @@ function Page() {
 
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <h2 className="text-3xl md:text-4xl font-bold mb-3">Unser Kursangebot</h2>
-        <p className="text-muted-foreground mb-10">Vier Standorte in der Region — finden Sie Ihren Kurs in Ihrer Nähe.</p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {locations.map((loc) => (
-            <div key={loc} className="group rounded-3xl border border-border bg-card p-6 hover:border-primary hover:shadow-soft transition">
-              <div className="size-11 rounded-2xl bg-gradient-ocean grid place-items-center mb-4">
-                <MapPin className="size-5 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-bold">{loc}</h3>
-              <p className="text-sm text-muted-foreground mt-1">Aqua Fitness Kurse</p>
-              <Link to="/unternehmen" className="mt-4 inline-block text-sm font-medium text-primary group-hover:underline">
-                Anfragen →
-              </Link>
-            </div>
-          ))}
+        <p className="text-muted-foreground mb-10 max-w-2xl">
+          Wir bieten Aqua-Fitness-Kurse an verschiedenen Standorten und auf Anfrage auch bei Ihnen.
+        </p>
+        <div className="rounded-3xl border border-border bg-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-10 hover:border-primary hover:shadow-soft transition">
+          <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
+            <MapPin className="size-6 text-primary-foreground" />
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-1">Standortflexibel</h3>
+            <p className="text-muted-foreground">
+              An verschiedenen Standorten und auf Anfrage auch bei Ihnen vor Ort. Kontaktieren Sie uns für ein individuelles Angebot.
+            </p>
+            <Link to="/unternehmen" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+              Anfragen →
+            </Link>
+          </div>
         </div>
       </section>
     </>

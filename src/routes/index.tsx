@@ -119,7 +119,7 @@ function Home() {
           {[
             { k: "25+", v: "Jahre Erfahrung seit 1997" },
             { k: "5", v: "Säulen für Ihren Erfolg" },
-            { k: "4", v: "Standorte für Aqua Fitness" },
+            { k: "Flexibel", v: "an verschiedenen Standorten und auf Anfrage auch bei Ihnen" },
           ].map((s) => (
             <div key={s.k}>
               <div className="text-6xl md:text-7xl font-display font-bold">{s.k}</div>
