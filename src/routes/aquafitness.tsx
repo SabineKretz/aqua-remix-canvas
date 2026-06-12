@@ -7,7 +7,7 @@ export const Route = createFileRoute("/aquafitness")({
   head: () => ({
     meta: [
       { title: "Aqua Fitness Kurse – aqua-magic Deutschland" },
-      { name: "description", content: "Fitness im Wasser für jedes Alter. Gelenkschonend, effektiv und voller Spaß. Kurse in Dittelbrunn, Sennfeld, Schwebheim und Volkach." },
+      { name: "description", content: "Fitness im Wasser für jedes Alter. Gelenkschonend, effektiv und voller Spaß. An verschiedenen Standorten und auf Anfrage auch bei Ihnen." },
     ],
   }),
   component: Page,
