@@ -46,7 +46,6 @@ export function SiteLayout() {
           >
             Kontakt
           </Link>
-          <img src={logoAsset.url} alt="aqua-magic Deutschland" className="hidden lg:block h-16 w-auto" />
           <button onClick={() => setOpen(!open)} className="lg:hidden p-2 rounded-lg hover:bg-secondary" aria-label="Menu">
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
