@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Waves, Dumbbell, GraduationCap, Building2, Heart, Sparkles } from "lucide-react";
+import logoAsset from "@/assets/aqua-magic-logo.png.asset.json";
 import heroImg from "@/assets/hero-water.jpg";
 import aquaImg from "@/assets/aquafitness.jpg";
 import bootcampImg from "@/assets/bootcamp.jpg";
@@ -33,23 +34,30 @@ function Home() {
         <img src={heroImg} alt="" className="absolute inset-0 size-full object-cover" width={1920} height={1280} />
         <div className="absolute inset-0 bg-gradient-to-br from-deep/80 via-deep/50 to-primary/30" />
         <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-32 md:pt-40 md:pb-48 text-primary-foreground">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground/10 backdrop-blur border border-primary-foreground/20 text-xs font-medium tracking-widest uppercase mb-8">
-            <Sparkles className="size-3.5 text-accent" /> est. 1997
-          </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] max-w-4xl">
-            Bewegung im <span className="text-accent">Wasser.</span><br />
-            Energie fürs Leben.
-          </h1>
-          <p className="mt-8 text-lg md:text-xl text-primary-foreground/80 max-w-2xl">
-            Aqua-Magic Deutschland — Ihr Partner für Gesundheit, Aqua Fitness und betriebliches Gesundheits­management. Fünf Säulen für Ihren gesunden Erfolg.
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link to="/aquafitness" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-accent text-accent-foreground font-semibold shadow-glow hover:scale-[1.02] transition">
-              Kurse entdecken <ArrowRight className="size-4" />
-            </Link>
-            <Link to="/ausbildung" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary-foreground/10 backdrop-blur border border-primary-foreground/20 font-medium hover:bg-primary-foreground/20 transition">
-              Trainer werden
-            </Link>
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground/10 backdrop-blur border border-primary-foreground/20 text-xs font-medium tracking-widest uppercase mb-8">
+                <Sparkles className="size-3.5 text-accent" /> est. 1997
+              </div>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] max-w-4xl">
+                Bewegung im <span className="text-accent">Wasser.</span><br />
+                Energie fürs Leben.
+              </h1>
+              <p className="mt-8 text-lg md:text-xl text-primary-foreground/80 max-w-2xl">
+                Aqua-Magic Deutschland — Ihr Partner für Gesundheit, Aqua Fitness und betriebliches Gesundheits­management. Fünf Säulen für Ihren gesunden Erfolg.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-3">
+                <Link to="/aquafitness" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-accent text-accent-foreground font-semibold shadow-glow hover:scale-[1.02] transition">
+                  Kurse entdecken <ArrowRight className="size-4" />
+                </Link>
+                <Link to="/ausbildung" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary-foreground/10 backdrop-blur border border-primary-foreground/20 font-medium hover:bg-primary-foreground/20 transition">
+                  Trainer werden
+                </Link>
+              </div>
+            </div>
+            <div className="flex-shrink-0">
+              <img src={logoAsset.url} alt="aqua-magic Deutschland Logo" className="h-32 md:h-48 lg:h-64 w-auto drop-shadow-2xl" />
+            </div>
           </div>
         </div>
       </section>
