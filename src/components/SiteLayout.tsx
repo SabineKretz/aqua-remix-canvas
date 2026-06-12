@@ -1,6 +1,7 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Waves } from "lucide-react";
+import logoAsset from "@/assets/aqua-magic-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Start" },
@@ -20,14 +21,8 @@ export function SiteLayout() {
     <div className="min-h-screen flex flex-col bg-background">
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border">
         <div className="mx-auto max-w-7xl px-6 h-18 flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="size-10 rounded-2xl bg-gradient-hero grid place-items-center shadow-soft group-hover:scale-105 transition-transform">
-              <Waves className="size-5 text-primary-foreground" />
-            </div>
-            <div className="leading-tight">
-              <div className="font-display font-bold text-lg">aqua-magic</div>
-              <div className="text-[10px] tracking-widest uppercase text-muted-foreground">Deutschland · seit 1997</div>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img src={logoAsset.url} alt="aqua-magic Deutschland" className="h-12 w-auto group-hover:scale-105 transition-transform" />
           </Link>
           <nav className="hidden lg:flex items-center gap-1">
             {nav.map((n) => {
@@ -80,11 +75,8 @@ export function SiteLayout() {
       <footer className="mt-24 border-t border-border bg-deep text-primary-foreground">
         <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-10">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="size-10 rounded-2xl bg-gradient-hero grid place-items-center">
-                <Waves className="size-5 text-primary-foreground" />
-              </div>
-              <span className="font-display font-bold text-xl">aqua-magic</span>
+            <div className="mb-4 inline-block rounded-2xl bg-primary-foreground p-3">
+              <img src={logoAsset.url} alt="aqua-magic Deutschland" className="h-14 w-auto" />
             </div>
             <p className="text-sm text-primary-foreground/70 max-w-xs">
               Ihr Partner für Gesundheit, Aqua Fitness und betriebliches Gesundheitsmanagement seit 1997.
