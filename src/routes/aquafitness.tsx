@@ -22,7 +22,7 @@ const benefits = [
   "Echter Kalorienkiller — Fitness mit Spaßfaktor",
 ];
 
-const locations = ["Dittelbrunn", "Sennfeld", "Schwebheim", "Volkach"];
+
 
 function Page() {
   return (
