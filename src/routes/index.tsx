@@ -34,7 +34,7 @@ function Home() {
         <img src={heroImg} alt="" className="absolute inset-0 size-full object-cover" width={1920} height={1280} />
         <div className="absolute inset-0 bg-gradient-to-br from-deep/80 via-deep/50 to-primary/30" />
         <div className="relative mx-auto max-w-7xl px-6 pt-28 pb-32 md:pt-40 md:pb-48 text-primary-foreground">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
             <div className="flex-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-foreground/10 backdrop-blur border border-primary-foreground/20 text-xs font-medium tracking-widest uppercase mb-8">
                 <Sparkles className="size-3.5 text-accent" /> est. 1997
@@ -55,8 +55,8 @@ function Home() {
                 </Link>
               </div>
             </div>
-            <div className="flex-shrink-0">
-              <img src={logoAsset.url} alt="aqua-magic Deutschland Logo" className="h-32 md:h-48 lg:h-64 w-auto drop-shadow-2xl" />
+            <div className="flex-shrink-0 lg:mt-10">
+              <img src={logoAsset.url} alt="aqua-magic Deutschland Logo" className="h-24 md:h-36 lg:h-48 w-auto drop-shadow-2xl" />
             </div>
           </div>
         </div>
