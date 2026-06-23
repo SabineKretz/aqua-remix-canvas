@@ -67,18 +67,42 @@ function Page() {
           <br />
           Die Kostenerstattung durch Ihre Krankenkasse ist möglich.
         </p>
-        <div className="rounded-3xl border border-border bg-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-10 hover:border-primary hover:shadow-soft transition">
-          <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
-            <MapPin className="size-6 text-primary-foreground" />
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center">
+            <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
+              <MapPin className="size-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-1">Sennfeld</h3>
+              <p className="text-muted-foreground">
+                Aqua-Fitness-Kurse in Sennfeld. Melden Sie sich für aktuelle Termine und Details.
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="text-xl font-bold mb-1">Standortflexibel</h3>
-            <p className="text-muted-foreground">
-              An verschiedenen Standorten und auf Anfrage auch bei Ihnen vor Ort. Kontaktieren Sie uns für ein individuelles Angebot.
-            </p>
-            <Link to="/unternehmen" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
-              Anfragen →
-            </Link>
+          <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center">
+            <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
+              <MapPin className="size-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-1">Schwebheim</h3>
+              <p className="text-muted-foreground">
+                Aqua-Fitness-Kurse in Schwebheim. Melden Sie sich für aktuelle Termine und Details.
+              </p>
+            </div>
+          </div>
+          <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center">
+            <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
+              <MapPin className="size-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold mb-1">Standortflexibel</h3>
+              <p className="text-muted-foreground">
+                An verschiedenen Standorten und auf Anfrage auch bei Ihnen vor Ort. Kontaktieren Sie uns für ein individuelles Angebot.
+              </p>
+              <Link to="/unternehmen" className="mt-4 inline-block text-sm font-medium text-primary hover:underline">
+                Anfragen →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
