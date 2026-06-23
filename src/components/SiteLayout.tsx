@@ -8,6 +8,7 @@ const nav = [
   { to: "/aquafitness", label: "Aqua Fitness" },
   { to: "/bootcamp", label: "Bootcamp" },
   { to: "/ausbildung", label: "Ausbildung" },
+  { to: "/weiterbildung", label: "Weiterbildung" },
   { to: "/inhouse", label: "Inhouse" },
   { to: "/coaching", label: "BGM" },
   { to: "/unternehmen", label: "Unternehmen" },
