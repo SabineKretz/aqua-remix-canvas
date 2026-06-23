@@ -80,7 +80,7 @@ function Page() {
               </div>
               <div>
                 <div className="text-xs uppercase tracking-widest opacity-70">E-Mail</div>
-                <div className="opacity-90 text-sm">Wir freuen uns auf Ihre Anfrage — telefonisch oder per Mail (fast) jederzeit.</div>
+                <a href="mailto:info@happiness-rebel-academy.de" className="opacity-90 text-sm hover:text-accent transition">info@happiness-rebel-academy.de</a>
               </div>
             </li>
           </ul>
