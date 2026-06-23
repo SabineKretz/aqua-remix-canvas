@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WeiterbildungRouteImport } from './routes/weiterbildung'
 import { Route as UnternehmenRouteImport } from './routes/unternehmen'
 import { Route as InhouseRouteImport } from './routes/inhouse'
 import { Route as CoachingRouteImport } from './routes/coaching'
@@ -17,6 +18,11 @@ import { Route as AusbildungRouteImport } from './routes/ausbildung'
 import { Route as AquafitnessRouteImport } from './routes/aquafitness'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WeiterbildungRoute = WeiterbildungRouteImport.update({
+  id: '/weiterbildung',
+  path: '/weiterbildung',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UnternehmenRoute = UnternehmenRouteImport.update({
   id: '/unternehmen',
   path: '/unternehmen',
@@ -61,6 +67,7 @@ export interface FileRoutesByFullPath {
   '/coaching': typeof CoachingRoute
   '/inhouse': typeof InhouseRoute
   '/unternehmen': typeof UnternehmenRoute
+  '/weiterbildung': typeof WeiterbildungRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -70,6 +77,7 @@ export interface FileRoutesByTo {
   '/coaching': typeof CoachingRoute
   '/inhouse': typeof InhouseRoute
   '/unternehmen': typeof UnternehmenRoute
+  '/weiterbildung': typeof WeiterbildungRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -80,6 +88,7 @@ export interface FileRoutesById {
   '/coaching': typeof CoachingRoute
   '/inhouse': typeof InhouseRoute
   '/unternehmen': typeof UnternehmenRoute
+  '/weiterbildung': typeof WeiterbildungRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -91,6 +100,7 @@ export interface FileRouteTypes {
     | '/coaching'
     | '/inhouse'
     | '/unternehmen'
+    | '/weiterbildung'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -100,6 +110,7 @@ export interface FileRouteTypes {
     | '/coaching'
     | '/inhouse'
     | '/unternehmen'
+    | '/weiterbildung'
   id:
     | '__root__'
     | '/'
@@ -109,6 +120,7 @@ export interface FileRouteTypes {
     | '/coaching'
     | '/inhouse'
     | '/unternehmen'
+    | '/weiterbildung'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -119,10 +131,18 @@ export interface RootRouteChildren {
   CoachingRoute: typeof CoachingRoute
   InhouseRoute: typeof InhouseRoute
   UnternehmenRoute: typeof UnternehmenRoute
+  WeiterbildungRoute: typeof WeiterbildungRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/weiterbildung': {
+      id: '/weiterbildung'
+      path: '/weiterbildung'
+      fullPath: '/weiterbildung'
+      preLoaderRoute: typeof WeiterbildungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/unternehmen': {
       id: '/unternehmen'
       path: '/unternehmen'
@@ -183,6 +203,7 @@ const rootRouteChildren: RootRouteChildren = {
   CoachingRoute: CoachingRoute,
   InhouseRoute: InhouseRoute,
   UnternehmenRoute: UnternehmenRoute,
+  WeiterbildungRoute: WeiterbildungRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
