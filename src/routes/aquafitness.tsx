@@ -64,6 +64,8 @@ function Page() {
         <h2 className="text-3xl md:text-4xl font-bold mb-3">Unser Kursangebot</h2>
         <p className="text-muted-foreground mb-10 max-w-2xl">
           Wir bieten Aqua-Fitness-Kurse an verschiedenen Standorten und auf Anfrage auch bei Ihnen.
+          <br />
+          Die Kostenerstattung durch Ihre Krankenkasse ist möglich.
         </p>
         <div className="rounded-3xl border border-border bg-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-10 hover:border-primary hover:shadow-soft transition">
           <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
