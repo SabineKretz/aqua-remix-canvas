@@ -93,12 +93,17 @@ export function SiteLayout() {
           </div>
           <div>
             <h4 className="font-semibold mb-4">Kontakt</h4>
-            <address className="not-italic text-sm text-primary-foreground/70 space-y-1">
+            <address className="not-italic text-sm text-primary-foreground/ship space-y-1">
               <div>aqua-magic Deutschland</div>
               <div>Ebracher Weg 24</div>
               <div>D 97513 Michelau im Steigerwald</div>
               <div className="pt-2">Natascha Woithe</div>
               <div>Tel. 0172 / 9367279</div>
+              <div>
+                <a href="mailto:info@happiness-rebel-academy.de" className="hover:text-accent transition">
+                  info@happiness-rebel-academy.de
+                </a>
+              </div>
             </address>
           </div>
         </div>
