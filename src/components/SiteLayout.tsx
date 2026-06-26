@@ -108,9 +108,14 @@ export function SiteLayout() {
           </div>
         </div>
         <div className="border-t border-primary-foreground/10">
-          <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-primary-foreground/50 flex flex-wrap justify-between gap-3">
+          <div className="mx-auto max-w-7xl px-6 py-6 text-xs text-primary-foreground/60 flex flex-wrap items-center justify-between gap-3">
             <span>© {new Date().getFullYear()} aqua-magic Deutschland</span>
-            <span>„Was immer du tun kannst oder träumst es zu können, fang damit an." — Goethe</span>
+            <nav className="flex flex-wrap gap-4">
+              <Link to="/impressum" className="hover:text-accent transition">Impressum</Link>
+              <Link to="/datenschutz" className="hover:text-accent transition">Datenschutz</Link>
+              <Link to="/agb" className="hover:text-accent transition">AGB</Link>
+            </nav>
+            <span className="opacity-80">„Was immer du tun kannst oder träumst es zu können, fang damit an." — Goethe</span>
           </div>
         </div>
       </footer>
