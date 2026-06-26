@@ -12,10 +12,13 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeiterbildungRouteImport } from './routes/weiterbildung'
 import { Route as UnternehmenRouteImport } from './routes/unternehmen'
 import { Route as InhouseRouteImport } from './routes/inhouse'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as CoachingRouteImport } from './routes/coaching'
 import { Route as BootcampRouteImport } from './routes/bootcamp'
 import { Route as AusbildungRouteImport } from './routes/ausbildung'
 import { Route as AquafitnessRouteImport } from './routes/aquafitness'
+import { Route as AgbRouteImport } from './routes/agb'
 import { Route as IndexRouteImport } from './routes/index'
 
 const WeiterbildungRoute = WeiterbildungRouteImport.update({
@@ -31,6 +34,16 @@ const UnternehmenRoute = UnternehmenRouteImport.update({
 const InhouseRoute = InhouseRouteImport.update({
   id: '/inhouse',
   path: '/inhouse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CoachingRoute = CoachingRouteImport.update({
@@ -53,6 +66,11 @@ const AquafitnessRoute = AquafitnessRouteImport.update({
   path: '/aquafitness',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AgbRoute = AgbRouteImport.update({
+  id: '/agb',
+  path: '/agb',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -61,20 +79,26 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
   '/aquafitness': typeof AquafitnessRoute
   '/ausbildung': typeof AusbildungRoute
   '/bootcamp': typeof BootcampRoute
   '/coaching': typeof CoachingRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
   '/inhouse': typeof InhouseRoute
   '/unternehmen': typeof UnternehmenRoute
   '/weiterbildung': typeof WeiterbildungRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
   '/aquafitness': typeof AquafitnessRoute
   '/ausbildung': typeof AusbildungRoute
   '/bootcamp': typeof BootcampRoute
   '/coaching': typeof CoachingRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
   '/inhouse': typeof InhouseRoute
   '/unternehmen': typeof UnternehmenRoute
   '/weiterbildung': typeof WeiterbildungRoute
@@ -82,10 +106,13 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/agb': typeof AgbRoute
   '/aquafitness': typeof AquafitnessRoute
   '/ausbildung': typeof AusbildungRoute
   '/bootcamp': typeof BootcampRoute
   '/coaching': typeof CoachingRoute
+  '/datenschutz': typeof DatenschutzRoute
+  '/impressum': typeof ImpressumRoute
   '/inhouse': typeof InhouseRoute
   '/unternehmen': typeof UnternehmenRoute
   '/weiterbildung': typeof WeiterbildungRoute
@@ -94,30 +121,39 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/agb'
     | '/aquafitness'
     | '/ausbildung'
     | '/bootcamp'
     | '/coaching'
+    | '/datenschutz'
+    | '/impressum'
     | '/inhouse'
     | '/unternehmen'
     | '/weiterbildung'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/agb'
     | '/aquafitness'
     | '/ausbildung'
     | '/bootcamp'
     | '/coaching'
+    | '/datenschutz'
+    | '/impressum'
     | '/inhouse'
     | '/unternehmen'
     | '/weiterbildung'
   id:
     | '__root__'
     | '/'
+    | '/agb'
     | '/aquafitness'
     | '/ausbildung'
     | '/bootcamp'
     | '/coaching'
+    | '/datenschutz'
+    | '/impressum'
     | '/inhouse'
     | '/unternehmen'
     | '/weiterbildung'
@@ -125,10 +161,13 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AgbRoute: typeof AgbRoute
   AquafitnessRoute: typeof AquafitnessRoute
   AusbildungRoute: typeof AusbildungRoute
   BootcampRoute: typeof BootcampRoute
   CoachingRoute: typeof CoachingRoute
+  DatenschutzRoute: typeof DatenschutzRoute
+  ImpressumRoute: typeof ImpressumRoute
   InhouseRoute: typeof InhouseRoute
   UnternehmenRoute: typeof UnternehmenRoute
   WeiterbildungRoute: typeof WeiterbildungRoute
@@ -155,6 +194,20 @@ declare module '@tanstack/react-router' {
       path: '/inhouse'
       fullPath: '/inhouse'
       preLoaderRoute: typeof InhouseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/coaching': {
@@ -185,6 +238,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AquafitnessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/agb': {
+      id: '/agb'
+      path: '/agb'
+      fullPath: '/agb'
+      preLoaderRoute: typeof AgbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -197,10 +257,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AgbRoute: AgbRoute,
   AquafitnessRoute: AquafitnessRoute,
   AusbildungRoute: AusbildungRoute,
   BootcampRoute: BootcampRoute,
   CoachingRoute: CoachingRoute,
+  DatenschutzRoute: DatenschutzRoute,
+  ImpressumRoute: ImpressumRoute,
   InhouseRoute: InhouseRoute,
   UnternehmenRoute: UnternehmenRoute,
   WeiterbildungRoute: WeiterbildungRoute,
