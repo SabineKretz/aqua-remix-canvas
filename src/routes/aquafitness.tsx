@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
-import { Check, MapPin } from "lucide-react";
+import { Check, MapPin, Calendar, Clock } from "lucide-react";
 import img from "@/assets/aquafitness.jpg";
 
 export const Route = createFileRoute("/aquafitness")({
@@ -21,8 +21,6 @@ const benefits = [
   "Venentraining: Verbesserung des venösen Rücktransportes",
   "Echter Kalorienkiller — Fitness mit Spaßfaktor",
 ];
-
-
 
 function Page() {
   return (
@@ -67,30 +65,92 @@ function Page() {
           <br /><br />
           Eine (teilweise oder komplette) Kostenrückerstattung durch die Krankenkasse ist möglich. Die Höhe der Erstattung richtet sich nach den jeweiligen Bestimmungen Ihrer Krankenkasse. Bitte klären Sie die Kostenübernahme vorab direkt mit Ihrer Krankenkasse.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center">
-            <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
-              <MapPin className="size-6 text-primary-foreground" />
-            </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Sennfeld */}
+          <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-8 md:p-10 flex flex-col gap-6">
             <div>
-              <h3 className="text-xl font-bold mb-1">Sennfeld</h3>
-              <p className="text-muted-foreground">
-                Aqua-Fitness-Kurse in Sennfeld. Melden Sie sich für aktuelle Termine und Details.
-              </p>
+              <div className="text-xs tracking-widest uppercase opacity-80 mb-2">Standort</div>
+              <h3 className="text-2xl md:text-3xl font-bold">Sennfeld</h3>
             </div>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+                <Clock className="size-5 shrink-0 mt-0.5 text-accent" />
+                <div className="text-sm leading-relaxed">
+                  <p className="font-semibold">Montag</p>
+                  <p>Aqua-Fitness, 19.45–20.30 Uhr</p>
+                  <p>Aqua-Power, 20.30–21.15 Uhr</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
+                <div className="text-sm leading-relaxed">
+                  <p className="font-semibold">Herbst 2026 · Kursstart: Montag, 21.09.2026</p>
+                  <p>21.09. / 28.09. / 05.10. / 12.10. / 19.10. / 26.10. / 09.11. / 16.11. / 23.11. / 30.11.2026</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
+                <div className="text-sm leading-relaxed">
+                  <p className="font-semibold">Frühjahr 2027 · Kursstart: Montag, 18.01.2027</p>
+                  <p>18.01. / 25.01. / 01.02. / 15.02. / 22.02. / 01.03. / 08.03. / 15.03. / 05.04. / 12.04.2027</p>
+                </div>
+              </div>
+            </div>
+
+            <Link to="/unternehmen" className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:brightness-110 transition">
+              Anmeldung
+            </Link>
           </div>
-          <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center">
-            <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
-              <MapPin className="size-6 text-primary-foreground" />
-            </div>
+
+          {/* Schwebheim */}
+          <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-8 md:p-10 flex flex-col gap-6">
             <div>
-              <h3 className="text-xl font-bold mb-1">Schwebheim</h3>
-              <p className="text-muted-foreground">
-                Aqua-Fitness-Kurse in Schwebheim. Melden Sie sich für aktuelle Termine und Details.
-              </p>
+              <div className="text-xs tracking-widest uppercase opacity-80 mb-2">Standort</div>
+              <h3 className="text-2xl md:text-3xl font-bold">Schwebheim</h3>
             </div>
+
+            <div className="space-y-4">
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+                <Clock className="size-5 shrink-0 mt-0.5 text-accent" />
+                <div className="text-sm leading-relaxed">
+                  <p className="font-semibold">Dienstag</p>
+                  <p>Aqua-Fitness, 19.00–19.45 Uhr</p>
+                  <p>Aqua-Power, 20.00–20.45 Uhr</p>
+                  <p className="mt-1 font-semibold">Freitag</p>
+                  <p>Aqua-Fitness, 19.00–19.45 Uhr</p>
+                  <p>Aqua-Power, 19.45–20.30 Uhr</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
+                <div className="text-sm leading-relaxed">
+                  <p className="font-semibold">Herbst 2026 · Kursstart: Dienstag, 22.09.2026</p>
+                  <p>22.09. / 29.09. / 06.10. / 13.10. / 20.10. / 27.10. / 10.11. / 17.11. / 24.11. / 01.12.2026</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
+                <div className="text-sm leading-relaxed">
+                  <p className="font-semibold">Herbst 2026 · Kursstart: Freitag, 18.09.2026</p>
+                  <p>18.09. / 25.09. / 02.10. / 09.10. / 16.10. / 23.10. / 30.10. / 13.11. / 20.11. / 27.11.2026</p>
+                </div>
+              </div>
+            </div>
+
+            <Link to="/unternehmen" className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:brightness-110 transition">
+              Anmeldung
+            </Link>
           </div>
-          <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center">
+        </div>
+
+        <div className="mt-6 flex justify-center">
+          <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center max-w-md w-full">
             <div className="size-14 rounded-2xl bg-gradient-ocean grid place-items-center shrink-0">
               <MapPin className="size-6 text-primary-foreground" />
             </div>
