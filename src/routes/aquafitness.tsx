@@ -29,7 +29,7 @@ function Page() {
     <>
       <PageHeader
         eyebrow="Kurse"
-        title="Der Trend Aqua-Fitness — für jedes Alter."
+        title="Der Trend Aqua-Fitness — für jedes Alter und Fitness Level."
         subtitle="Fitnesstraining im Wasser erfreut sich immer größerer Beliebtheit. Erleben Sie, warum."
         image={img}
       />
@@ -63,9 +63,9 @@ function Page() {
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <h2 className="text-3xl md:text-4xl font-bold mb-3">Unser Kursangebot</h2>
         <p className="text-muted-foreground mb-10 max-w-2xl">
-          Wir bieten Aqua-Fitness-Kurse an verschiedenen Standorten und auf Anfrage auch bei Ihnen.
-          <br />
-          Die Kostenerstattung durch Ihre Krankenkasse ist möglich.
+          Wir bieten Aqua-Fitness-Kurse an verschiedenen Standorten an und kommen auf Wunsch auch direkt zu Ihnen.
+          <br /><br />
+          Eine (teilweise oder komplette) Kostenrückerstattung durch die Krankenkasse ist möglich. Die Höhe der Erstattung richtet sich nach den jeweiligen Bestimmungen Ihrer Krankenkasse. Bitte klären Sie die Kostenübernahme vorab direkt mit Ihrer Krankenkasse.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="rounded-3xl border border-border bg-card p-8 flex flex-col items-center gap-4 hover:border-primary hover:shadow-soft transition text-center">
