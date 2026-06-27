@@ -51,29 +51,15 @@ function Page() {
           ))}
         </div>
 
-        <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-10 md:p-14 grid lg:grid-cols-2 gap-10">
-          <div>
-            <div className="text-xs tracking-widest uppercase opacity-80 mb-3">Nächster Kursstart</div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Montag, 17.03.2025</h2>
-            <p className="opacity-90">17:30 – 19:00 Uhr · 5 Einheiten à 90 Minuten · 100 €</p>
-            <p className="mt-6 opacity-80 text-sm max-w-md">
-              Auch für Mannschaften und Teams buchbar — wir erstellen gern ein individuell abgestimmtes Angebot.
-            </p>
-            <Link to="/unternehmen" className="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-foreground font-semibold">
-              Jetzt anfragen
-            </Link>
-          </div>
-          <div>
-            <div className="text-xs tracking-widest uppercase opacity-80 mb-3">Termine</div>
-            <ul className="space-y-3">
-              {dates.map((d) => (
-                <li key={d} className="flex items-start gap-3 p-4 rounded-2xl bg-primary-foreground/10 backdrop-blur">
-                  <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
-                  <span className="text-sm">{d}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-10 md:p-14">
+          <div className="text-xs tracking-widest uppercase opacity-80 mb-3">Kursstart</div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">individuell auf Anfrage</h2>
+          <p className="opacity-90 max-w-xl">
+            Für Mannschaften und Teams buchbar - wir erstellen Ihnen gern ein individuell abgestimmtes Angebot.
+          </p>
+          <Link to="/unternehmen" className="mt-8 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-foreground font-semibold">
+            Jetzt anfragen
+          </Link>
         </div>
 
         <div className="mt-16">
