@@ -35,6 +35,10 @@ function Page() {
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Trainingsvorbereitung mit dem Aqua-Magic Team</h2>
+        <p className="text-xl md:text-2xl max-w-4xl mb-16">
+          Gemeinsam trainieren, Grenzen neu definieren und mit Freude stärker werden - Schritt für Schritt zum Erfolg.
+        </p>
         <div className="grid md:grid-cols-3 gap-5 mb-16">
           {features.map((f) => (
             <div key={f.title} className="rounded-3xl border border-border bg-card p-7">
