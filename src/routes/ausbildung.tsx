@@ -14,8 +14,8 @@ export const Route = createFileRoute("/ausbildung")({
 });
 
 const courses = [
-  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training." },
   { title: "Aqua Fitness Trainer", desc: "Die fundierte Ausbildung zum zertifizierten Aqua Fitness Trainer." },
+  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training." },
   { title: "Baby- & Bambinischwimmen", desc: "Wassergewöhnung und Bewegungs­förderung für die Kleinsten." },
   { title: "Prä- & Postnatales Aquatraining", desc: "Spezialisiertes Training für die Zeit vor und nach der Geburt." },
   { title: "Aqua Body & Soul Balancing", desc: "Wellness und Entspannung im Wasser — für Körper und Seele." },
