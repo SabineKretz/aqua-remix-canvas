@@ -26,8 +26,8 @@ function Page() {
     <>
       <PageHeader
         eyebrow="Ausbildung"
-        title="Werden Sie Teil unserer Trainer-Familie."
-        subtitle="Fünf zertifizierte Ausbildungen — vom Fit Board bis zum Aqua Body & Soul Balancing."
+  title="Werden Sie Teil unserer Trainer-Familie."
+        subtitle="Fünf zertifizierte Ausbildungen - vom Aqua Fitness Trainer, über Babyschwimmen und Fit Board bis zum Aqua Body & Soul Balancing."
         image={img}
       />
 
