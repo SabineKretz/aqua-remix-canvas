@@ -15,7 +15,7 @@ export const Route = createFileRoute("/bootcamp")({
 
 const features = [
   { icon: Users, title: "Kleine Gruppen", desc: "Individuelle Betreuung im Teamspirit." },
-  { icon: Zap, title: "Natürliche Bewegung", desc: "Raus aus der Betonwüste — frische Luft, echtes Training." },
+  { icon: Zap, title: "Natürliche Bewegung", desc: "an der frischen Luft oder im erfrischenden Wasser - echtes Training." },
   { icon: Trophy, title: "Eigene Ziele", desc: "Gegenseitig motivieren und langfristig Erfolg haben." },
 ];
 
