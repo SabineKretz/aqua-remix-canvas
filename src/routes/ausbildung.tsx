@@ -14,8 +14,8 @@ export const Route = createFileRoute("/ausbildung")({
 });
 
 const courses = [
-  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training." },
   { title: "Aqua Fitness Trainer", desc: "Die fundierte Ausbildung zum zertifizierten Aqua Fitness Trainer." },
+  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training." },
   { title: "Baby- & Bambinischwimmen", desc: "Wassergewöhnung und Bewegungs­förderung für die Kleinsten." },
   { title: "Prä- & Postnatales Aquatraining", desc: "Spezialisiertes Training für die Zeit vor und nach der Geburt." },
   { title: "Aqua Body & Soul Balancing", desc: "Wellness und Entspannung im Wasser — für Körper und Seele." },
@@ -26,8 +26,8 @@ function Page() {
     <>
       <PageHeader
         eyebrow="Ausbildung"
-        title="Werden Sie Teil unserer Trainer-Familie."
-        subtitle="Fünf zertifizierte Ausbildungen — vom Fit Board bis zum Aqua Body & Soul Balancing."
+  title="Werden Sie Teil unserer Trainer-Familie."
+        subtitle="Fünf zertifizierte Ausbildungen - vom Aqua Fitness Trainer, über Babyschwimmen und Fit Board bis zum Aqua Body & Soul Balancing."
         image={img}
       />
 
@@ -36,20 +36,16 @@ function Page() {
           {courses.map((c, i) => (
             <article
               key={c.title}
-              className={`group rounded-3xl border border-border bg-card p-7 hover:border-primary hover:shadow-soft transition ${
-                i === 0 ? "lg:col-span-2 bg-gradient-hero text-primary-foreground border-transparent" : ""
+              className={`group rounded-3xl border border-transparent bg-gradient-hero text-primary-foreground p-7 hover:shadow-soft transition ${
+                i === 0 ? "lg:col-span-2" : ""
               }`}
             >
-              <div className={`size-12 rounded-2xl grid place-items-center mb-5 ${
-                i === 0 ? "bg-primary-foreground/15" : "bg-primary/10"
-              }`}>
-                <GraduationCap className={`size-5 ${i === 0 ? "text-primary-foreground" : "text-primary"}`} />
+              <div className="size-12 rounded-2xl grid place-items-center mb-5 bg-primary-foreground/15">
+                <GraduationCap className="size-5 text-primary-foreground" />
               </div>
               <h3 className="text-xl font-bold mb-2">{c.title}</h3>
-              <p className={`text-sm ${i === 0 ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{c.desc}</p>
-              <Link to="/unternehmen" className={`mt-6 inline-flex items-center gap-1.5 text-sm font-semibold ${
-                i === 0 ? "text-accent" : "text-primary"
-              }`}>
+              <p className="text-sm text-primary-foreground/80">{c.desc}</p>
+              <Link to="/unternehmen" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
                 Anmeldung <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
               </Link>
             </article>
