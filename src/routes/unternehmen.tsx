@@ -28,7 +28,7 @@ function Page() {
             Aqua-Magic Deutschland ist Teil der Happiness-Rebel-Academy (ehemals human-magic) — gegründet aus der Überzeugung, dass Gesundheit, Bewegung und Lebensfreude untrennbar zusammen­gehören. Seit über 25 Jahren bilden wir Trainer aus, gestalten Kurse für jedes Alter und begleiten Unternehmen auf dem Weg zu einer gesunden Organisation.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Unser Team verbindet sportliche Spitzen­leistung mit pädagogischem Anspruch — vom Babyschwimmen bis zum Aqua Body & Soul Balancing. Erfolg machen wir nicht nur messbar, sondern spürbar.
+            Unser Team verbindet sportliche Spitzen­leistung mit pädagogischem Anspruch — vom Babyschwimmen bis zum Aqua Power. Erfolg machen wir nicht nur messbar, sondern spürbar.
           </p>
 
           <div className="mt-10 flex gap-3">
