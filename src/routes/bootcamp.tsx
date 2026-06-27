@@ -29,8 +29,8 @@ function Page() {
     <>
       <PageHeader
         eyebrow="Saisonvorbereitung"
-        title="Bootcamp mit dem Aqua-Magic-Team."
-        subtitle="Mit Spaß gesünder werden, im Team Grenzen verschieben — gemeinsam langfristig Erfolg haben."
+        title="Bootcamp und Trainingsvorbereitung"
+        subtitle="Saisonvorbereitung für Mannschaften, Teams und Privatpersonen"
         image={img}
       />
 
