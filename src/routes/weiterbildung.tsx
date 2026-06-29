@@ -35,7 +35,7 @@ const items = [
     title: "Motivation für Aquafitness-Trainer",
     text: "Sie leiten Aqua Fitness Kurse und wollen sich selbst und Ihre Teilnehmer mit neuen Ideen und Ansätzen begeistern? Wir haben ein Persönlichkeitstraining mit modernen Trainingsformen für Sie, damit sie Ihre Gäste begeistern werden und Ihnen neue Ideen präsentieren können.",
     duration: "1 Tag",
-    image: img2.url,
+    image: aquafitnessTrainerImg.url,
   },
   {
     title: "Aqua Fun & Animation",
