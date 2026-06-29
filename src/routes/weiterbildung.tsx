@@ -10,6 +10,7 @@ import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
 import img6 from "@/assets/wb-DSCN6709.jpg.asset.json";
 import img7 from "@/assets/wb-DSC_0589.jpg.asset.json";
 import babyImg from "@/assets/baby-bambini-spass.jpg.asset.json";
+import aquaKidsFunImg from "@/assets/aqua-kids-fun.jpg.asset.json";
 
 export const Route = createFileRoute("/weiterbildung")({
   head: () => ({
@@ -49,6 +50,12 @@ const items = [
     text: "Viele abwechslungsreiche Ideen für kleine Schwimmhallen bis hin zu Erlebnisbädern. Für die ganze Familie, Mutti mit Baby, Teenies, usw. Erlebnistage, Themennachmittage, Kurse.",
     duration: "1 Tag",
     image: img3.url,
+  },
+  {
+    title: "Aqua Kid`s Fun",
+    text: "Schwimmen lernen mal anders! – die etwas andere Schwimmausbildung. Zeitgemäßes Unterrichten auch für „Problem Kinder“! Grundlagen, Physiologie, Psychologie, Trainingslehre, Trainingsformen, Methodik, Didaktik, Kursaufbau, Marketing.",
+    duration: "2 Tage",
+    image: aquaKidsFunImg.url,
   },
   {
     title: "Aqua Creativ",
