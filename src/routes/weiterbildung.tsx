@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Clock } from "lucide-react";
+import heroImg from "@/assets/weiterbildung-hero.jpg.asset.json";
 import img1 from "@/assets/wb-DSC_0601.jpg.asset.json";
 import img2 from "@/assets/wb-IMG_20181011_094649.jpg.asset.json";
 import img3 from "@/assets/wb-Event-Aqua-Zumba.jpg.asset.json";
