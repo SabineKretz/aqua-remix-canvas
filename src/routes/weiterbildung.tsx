@@ -76,7 +76,7 @@ function Page() {
         eyebrow="Weiterbildung"
         title="Weiterbildung bei Aqua Magic."
         subtitle="Neue Impulse, frische Ideen und Persönlichkeitstraining für Schwimmlehrer und Aqua-Fitness-Trainer."
-        image={img1.url}
+        image={heroImg.url}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20">
