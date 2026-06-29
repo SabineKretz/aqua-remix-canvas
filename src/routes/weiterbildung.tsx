@@ -9,6 +9,7 @@ import img4 from "@/assets/wb-DSC_0762-Kopie.jpg.asset.json";
 import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
 import img6 from "@/assets/wb-DSCN6709.jpg.asset.json";
 import img7 from "@/assets/wb-DSC_0589.jpg.asset.json";
+import babyImg from "@/assets/baby-bambini-spass.jpg.asset.json";
 
 export const Route = createFileRoute("/weiterbildung")({
   head: () => ({
@@ -36,6 +37,12 @@ const items = [
     text: "Sie leiten Aqua Fitness Kurse und wollen sich selbst und Ihre Teilnehmer mit neuen Ideen und Ansätzen begeistern? Wir haben ein Persönlichkeitstraining mit modernen Trainingsformen für Sie, damit sie Ihre Gäste begeistern werden und Ihnen neue Ideen präsentieren können.",
     duration: "1 Tag",
     image: aquafitnessTrainerImg.url,
+  },
+  {
+    title: "Baby- und Bambini Spaß",
+    text: "Auffrischung für Babyschwimmlehrer die gerne viele neue Ideen und Austausch möchten.",
+    duration: "1 Tag",
+    image: babyImg.url,
   },
   {
     title: "Aqua Fun & Animation",
