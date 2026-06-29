@@ -52,6 +52,12 @@ const items = [
     image: img3.url,
   },
   {
+    title: "Aqua Kid`s Fun",
+    text: "Schwimmen lernen mal anders! – die etwas andere Schwimmausbildung. Zeitgemäßes Unterrichten auch für „Problem Kinder“! Grundlagen, Physiologie, Psychologie, Trainingslehre, Trainingsformen, Methodik, Didaktik, Kursaufbau, Marketing.",
+    duration: "2 Tage",
+    image: aquaKidsFunImg.url,
+  },
+  {
     title: "Aqua Creativ",
     text: "Sie sind schon Aqua Fitness Trainer, haben viel Erfahrung und hunderte von Teilnehmern geführt. Doch so manches Mal gehen Ihnen die Ideen aus? Wir haben sie für Sie: Ideen zur kreativen Gestaltung Ihrer Aqua Fitness Kurse. Wir zeigen Ihnen viele Möglichkeiten – unter anderem mit Alltagsthemen und Situationen kreativ umgesetzt, Tanz im und mit dem Wasser, Kampfsport, viele andere Sportarten miteinander kombiniert, Flach- und Tiefwassertraining sowie Training mit und ohne Gerät. Unendlich viele neue, verrückte und spannende Ideen – und viel Spaß im gemeinsamen Austausch!",
     duration: "1 Tag",
