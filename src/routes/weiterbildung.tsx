@@ -9,6 +9,7 @@ import img4 from "@/assets/wb-DSC_0762-Kopie.jpg.asset.json";
 import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
 import img6 from "@/assets/wb-DSCN6709.jpg.asset.json";
 import img7 from "@/assets/wb-DSC_0589.jpg.asset.json";
+import babyImg from "@/assets/baby-bambini-spass.jpg.asset.json";
 
 export const Route = createFileRoute("/weiterbildung")({
   head: () => ({
