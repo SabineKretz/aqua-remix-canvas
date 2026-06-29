@@ -70,6 +70,14 @@ function Page() {
                 <dt className="opacity-70">Telefon</dt>
                 <dd className="font-semibold text-base">0172 / 9367279</dd>
               </div>
+              <div>
+                <dt className="opacity-70">E-Mail</dt>
+                <dd className="font-semibold text-base">
+                  <a href="mailto:info@happiness-rebel-academy.de" className="underline underline-offset-2">
+                    info@happiness-rebel-academy.de
+                  </a>
+                </dd>
+              </div>
             </dl>
             <Link to="/unternehmen" className="mt-8 inline-flex w-full justify-center items-center px-5 py-3 rounded-full bg-accent text-accent-foreground font-semibold">
               Kontakt­daten ansehen
