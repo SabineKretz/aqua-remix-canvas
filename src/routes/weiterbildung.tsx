@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { Clock } from "lucide-react";
 import heroImg from "@/assets/weiterbildung-hero.jpg.asset.json";
 import img1 from "@/assets/wb-DSC_0601.jpg.asset.json";
-import img2 from "@/assets/wb-IMG_20181011_094649.jpg.asset.json";
+import aquafitnessTrainerImg from "@/assets/aquafitness-trainer-crop.jpg.asset.json";
 import img3 from "@/assets/wb-Event-Aqua-Zumba.jpg.asset.json";
 import img4 from "@/assets/wb-DSC_0762-Kopie.jpg.asset.json";
 import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
@@ -35,7 +35,7 @@ const items = [
     title: "Motivation für Aquafitness-Trainer",
     text: "Sie leiten Aqua Fitness Kurse und wollen sich selbst und Ihre Teilnehmer mit neuen Ideen und Ansätzen begeistern? Wir haben ein Persönlichkeitstraining mit modernen Trainingsformen für Sie, damit sie Ihre Gäste begeistern werden und Ihnen neue Ideen präsentieren können.",
     duration: "1 Tag",
-    image: img2.url,
+    image: aquafitnessTrainerImg.url,
   },
   {
     title: "Aqua Fun & Animation",
