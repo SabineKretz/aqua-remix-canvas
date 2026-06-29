@@ -39,6 +39,12 @@ const items = [
     image: aquafitnessTrainerImg.url,
   },
   {
+    title: "Baby- und Bambini Spaß",
+    text: "Auffrischung für Babyschwimmlehrer die gerne viele neue Ideen und Austausch möchten.",
+    duration: "1 Tag",
+    image: babyImg.url,
+  },
+  {
     title: "Aqua Fun & Animation",
     text: "Viele abwechslungsreiche Ideen für kleine Schwimmhallen bis hin zu Erlebnisbädern. Für die ganze Familie, Mutti mit Baby, Teenies, usw. Erlebnistage, Themennachmittage, Kurse.",
     duration: "1 Tag",
