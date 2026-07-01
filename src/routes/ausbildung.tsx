@@ -6,6 +6,7 @@ import aquaFitnessImg from "@/assets/aus-aqua-fitness-trainer.jpg.asset.json";
 import fitBoardImg from "@/assets/aus-fit-board.jpg.asset.json";
 import babyImg from "@/assets/aus-babyschwimmen.jpg.asset.json";
 import bodySoulImg from "@/assets/aus-aqua-body-soul.jpg.asset.json";
+import prePostnatalImg from "@/assets/pre-postnatal-aqua.png.asset.json";
 
 export const Route = createFileRoute("/ausbildung")({
   head: () => ({
@@ -21,7 +22,7 @@ const courses = [
   { title: "Aqua Fitness Trainer", desc: "Die fundierte Ausbildung zum zertifizierten Aqua Fitness Trainer.", image: aquaFitnessImg.url },
   { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training.", image: fitBoardImg.url },
   { title: "Baby- & Bambinischwimmen", desc: "Wassergewöhnung und Bewegungs­förderung für die Kleinsten.", image: babyImg.url },
-  { title: "Prä- & Postnatales Aquatraining", desc: "Spezialisiertes Training für die Zeit vor und nach der Geburt." },
+  { title: "Prä- & Postnatales Aquatraining", desc: "Spezialisiertes Training für die Zeit vor und nach der Geburt.", image: prePostnatalImg.url },
   { title: "Aqua Body & Soul Balancing", desc: "Wellness und Entspannung im Wasser — für Körper und Seele.", image: bodySoulImg.url },
 ];
 
