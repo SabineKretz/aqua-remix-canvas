@@ -45,12 +45,12 @@ function Page() {
               }`}
             >
               {c.image && (
-                <div className="aspect-[16/9] overflow-hidden">
+                <div className={c.title === "Fit Board" ? "" : "aspect-[16/9] overflow-hidden"}>
                   <img
                     src={c.image}
                     alt={c.title}
                     loading="lazy"
-                    className="size-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className={c.title === "Fit Board" ? "w-full object-contain group-hover:scale-105 transition-transform duration-500" : "size-full object-cover group-hover:scale-105 transition-transform duration-500"}
                   />
                 </div>
               )}
