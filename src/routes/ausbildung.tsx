@@ -2,6 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { GraduationCap, ArrowRight } from "lucide-react";
 import img from "@/assets/ausbildung.jpg";
+import aquaFitnessImg from "@/assets/aus-aqua-fitness-trainer.jpg.asset.json";
+import fitBoardImg from "@/assets/aus-fit-board.jpg.asset.json";
+import babyImg from "@/assets/aus-babyschwimmen.jpg.asset.json";
+import bodySoulImg from "@/assets/aus-aqua-body-soul.jpg.asset.json";
 
 export const Route = createFileRoute("/ausbildung")({
   head: () => ({
@@ -14,11 +18,11 @@ export const Route = createFileRoute("/ausbildung")({
 });
 
 const courses = [
-  { title: "Aqua Fitness Trainer", desc: "Die fundierte Ausbildung zum zertifizierten Aqua Fitness Trainer." },
-  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training." },
-  { title: "Baby- & Bambinischwimmen", desc: "Wassergewöhnung und Bewegungs­förderung für die Kleinsten." },
+  { title: "Aqua Fitness Trainer", desc: "Die fundierte Ausbildung zum zertifizierten Aqua Fitness Trainer.", image: aquaFitnessImg.url },
+  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training.", image: fitBoardImg.url },
+  { title: "Baby- & Bambinischwimmen", desc: "Wassergewöhnung und Bewegungs­förderung für die Kleinsten.", image: babyImg.url },
   { title: "Prä- & Postnatales Aquatraining", desc: "Spezialisiertes Training für die Zeit vor und nach der Geburt." },
-  { title: "Aqua Body & Soul Balancing", desc: "Wellness und Entspannung im Wasser — für Körper und Seele." },
+  { title: "Aqua Body & Soul Balancing", desc: "Wellness und Entspannung im Wasser — für Körper und Seele.", image: bodySoulImg.url },
 ];
 
 function Page() {
@@ -26,7 +30,7 @@ function Page() {
     <>
       <PageHeader
         eyebrow="Ausbildung"
-  title="Werden Sie Teil unserer Trainer-Familie."
+        title="Werden Sie Teil unserer Trainer-Familie."
         subtitle="Fünf zertifizierte Ausbildungen - vom Aqua Fitness Trainer, über Babyschwimmen und Fit Board bis zum Aqua Body & Soul Balancing."
         image={img}
       />
@@ -36,18 +40,30 @@ function Page() {
           {courses.map((c, i) => (
             <article
               key={c.title}
-              className={`group rounded-3xl border border-transparent bg-gradient-hero text-primary-foreground p-7 hover:shadow-soft transition ${
+              className={`group rounded-3xl overflow-hidden border border-transparent bg-gradient-hero text-primary-foreground hover:shadow-soft transition flex flex-col ${
                 i === 0 ? "lg:col-span-2" : ""
               }`}
             >
-              <div className="size-12 rounded-2xl grid place-items-center mb-5 bg-primary-foreground/15">
-                <GraduationCap className="size-5 text-primary-foreground" />
+              {c.image && (
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    loading="lazy"
+                    className="size-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div className="p-7 flex flex-col flex-1">
+                <div className="size-12 rounded-2xl grid place-items-center mb-5 bg-primary-foreground/15">
+                  <GraduationCap className="size-5 text-primary-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{c.title}</h3>
+                <p className="text-sm text-primary-foreground/80">{c.desc}</p>
+                <Link to="/unternehmen" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                  Anmeldung <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
+                </Link>
               </div>
-              <h3 className="text-xl font-bold mb-2">{c.title}</h3>
-              <p className="text-sm text-primary-foreground/80">{c.desc}</p>
-              <Link to="/unternehmen" className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                Anmeldung <ArrowRight className="size-4 group-hover:translate-x-1 transition" />
-              </Link>
             </article>
           ))}
         </div>
