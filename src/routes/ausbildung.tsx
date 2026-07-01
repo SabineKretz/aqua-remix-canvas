@@ -6,6 +6,7 @@ import aquaFitnessImg from "@/assets/aus-aqua-fitness-trainer.jpg.asset.json";
 import fitBoardImg from "@/assets/aus-fit-board.jpg.asset.json";
 import babyImg from "@/assets/aus-babyschwimmen.jpg.asset.json";
 import bodySoulImg from "@/assets/aus-aqua-body-soul.jpg.asset.json";
+import prePostnatalImg from "@/assets/pre-postnatal-aqua.png.asset.json";
 
 export const Route = createFileRoute("/ausbildung")({
   head: () => ({
