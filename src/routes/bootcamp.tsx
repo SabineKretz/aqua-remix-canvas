@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Users, Zap, Trophy } from "lucide-react";
 import img from "@/assets/bootcamp.jpg";
+import collage from "@/assets/bootcamp-collage.jpg.asset.json";
+import team from "@/assets/bootcamp-team.jpg.asset.json";
 
 export const Route = createFileRoute("/bootcamp")({
   head: () => ({
