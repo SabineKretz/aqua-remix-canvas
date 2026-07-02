@@ -36,11 +36,20 @@ function Page() {
 
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-3xl bg-secondary p-8 md:p-12 mb-16">
-          <div className="text-5xl text-accent font-display leading-none mb-2">„</div>
-          <blockquote className="text-xl md:text-2xl font-display font-medium leading-snug max-w-3xl">
-            Chef ist nicht der, der etwas tut, sondern der das Verlangen weckt, etwas zu tun.
-          </blockquote>
-          <div className="mt-4 text-sm uppercase tracking-widest text-muted-foreground">Edgar Pisani</div>
+          <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-8 items-center">
+            <div>
+              <div className="text-5xl text-accent font-display leading-none mb-2">„</div>
+              <blockquote className="text-xl md:text-2xl font-display font-medium leading-snug">
+                Chef ist nicht der, der etwas tut, sondern der das Verlangen weckt, etwas zu tun.
+              </blockquote>
+              <div className="mt-4 text-sm uppercase tracking-widest text-muted-foreground">Edgar Pisani</div>
+            </div>
+            <div className="flex justify-center md:justify-end">
+              <div className="aspect-square w-full max-w-[180px] rounded-full bg-white p-4 flex items-center justify-center shadow-sm">
+                <img src={certAsset.url} alt="Deutscher Standard Prävention – geprüft und zertifiziert" className="w-full h-full object-contain rounded-full" />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
