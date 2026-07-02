@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Check } from "lucide-react";
 import img from "@/assets/inhouse.jpg";
+import inhousePromoImg from "@/assets/inhouse-hero.jpg.asset.json";
 
 export const Route = createFileRoute("/inhouse")({
   head: () => ({
