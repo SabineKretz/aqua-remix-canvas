@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Check } from "lucide-react";
 import img from "@/assets/inhouse.jpg";
+import inhousePromoImg from "@/assets/inhouse-hero.jpg.asset.json";
 
 export const Route = createFileRoute("/inhouse")({
   head: () => ({
@@ -43,6 +44,14 @@ function Page() {
               </li>
             ))}
           </ul>
+
+          <div className="rounded-3xl overflow-hidden shadow-lg mb-10">
+            <img
+              src={inhousePromoImg.url}
+              alt="Aqua Magic Inhouse Schulungen"
+              className="w-full object-cover"
+            />
+          </div>
 
           <div className="rounded-3xl bg-secondary p-8">
             <p className="text-foreground/90 leading-relaxed">
