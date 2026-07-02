@@ -45,6 +45,14 @@ function Page() {
             ))}
           </ul>
 
+          <div className="rounded-3xl overflow-hidden shadow-lg mb-10">
+            <img
+              src={inhousePromoImg.url}
+              alt="Aqua Magic Inhouse Schulungen"
+              className="w-full object-cover"
+            />
+          </div>
+
           <div className="rounded-3xl bg-secondary p-8">
             <p className="text-foreground/90 leading-relaxed">
               Von Babys & Bambinis bis Senioren, von Aqua Fitness über Aqua Spinning bis hin zu Wellness mit Aqua Body & Soul Balancing — wir helfen Ihnen, alle Ihre Gäste glücklich zu machen.
