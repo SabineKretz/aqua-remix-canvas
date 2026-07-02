@@ -11,7 +11,7 @@ const nav = [
   { to: "/weiterbildung", label: "Weiterbildung" },
   { to: "/inhouse", label: "Inhouse" },
   { to: "/coaching", label: "BGM" },
-  { to: "/unternehmen", label: "Unternehmen" },
+  { to: "/unternehmen", label: "Über uns" },
 ] as const;
 
 export function SiteLayout() {
