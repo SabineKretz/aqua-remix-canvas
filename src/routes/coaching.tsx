@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Check } from "lucide-react";
 import img from "@/assets/coaching.jpg";
+import certAsset from "@/assets/praevention-zertifikat.jpg.asset.json";
 
 export const Route = createFileRoute("/coaching")({
   head: () => ({
