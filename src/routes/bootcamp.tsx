@@ -81,6 +81,11 @@ function Page() {
             ))}
           </div>
         </div>
+
+        <div className="mt-16 grid md:grid-cols-2 gap-6">
+          <img src={collage.url} alt="Bootcamp Impressionen" className="w-full h-auto rounded-3xl object-cover" />
+          <img src={team.url} alt="Bootcamp Team" className="w-full h-auto rounded-3xl object-cover" />
+        </div>
       </section>
     </>
   );
