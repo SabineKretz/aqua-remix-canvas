@@ -8,7 +8,7 @@ import img3 from "@/assets/aqua-fun-animation.jpg.asset.json";
 import img4 from "@/assets/wb-DSC_0762-Kopie.jpg.asset.json";
 import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
 import img6 from "@/assets/wb-DSCN6709.jpg.asset.json";
-import img7 from "@/assets/wb-DSC_0589.jpg.asset.json";
+import aquaDanceImg from "@/assets/aqua-dance.jpg.asset.json";
 import babyImg from "@/assets/babyschwimmen2.jpg.asset.json";
 import aquaKidsFunImg from "@/assets/aqua-kids-fun.jpg.asset.json";
 
@@ -79,7 +79,7 @@ const items = [
     title: "Aqua Dance",
     text: "Die herkömmliche Aqua Fitness aufgepeppt mit heißen Rhythmen und der Vielfalt, die der klassische, Standard-, Modern- und populäre Tanz bietet, begeistert jung und alt. Let's dance!",
     duration: "1 Tag",
-    image: img7.url,
+    image: aquaDanceImg.url,
   },
 ];
 
