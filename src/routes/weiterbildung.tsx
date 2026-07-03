@@ -11,6 +11,7 @@ import img6 from "@/assets/wb-DSCN6709.jpg.asset.json";
 import aquaDanceImg from "@/assets/aqua-dance.jpg.asset.json";
 import babyImg from "@/assets/babyschwimmen2.jpg.asset.json";
 import aquaKidsFunImg from "@/assets/aqua-kids-fun.jpg.asset.json";
+import aquaSpinningImg from "@/assets/aqua-spinning.jpg.asset.json";
 
 export const Route = createFileRoute("/weiterbildung")({
   head: () => ({
@@ -80,6 +81,12 @@ const items = [
     text: "Die herkömmliche Aqua Fitness aufgepeppt mit heißen Rhythmen und der Vielfalt, die der klassische, Standard-, Modern- und populäre Tanz bietet, begeistert jung und alt. Let's dance!",
     duration: "1 Tag",
     image: aquaDanceImg.url,
+  },
+  {
+    title: "Aqua Spinning",
+    text: "Intensives Cardio-Training auf dem Aqua-Bike im Pool: mit Musik, Herz und Power in jedes Takt schwitzen und die Wasserdynamik optimal nutzen. Ideal für alle, die eine neue, wassergestützte Ausdauer-Challenge suchen!",
+    duration: "1 Tag",
+    image: aquaSpinningImg.url,
   },
 ];
 
