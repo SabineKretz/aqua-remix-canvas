@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { Clock } from "lucide-react";
 import heroImg from "@/assets/weiterbildung-hero.jpg.asset.json";
 import img1 from "@/assets/wb-DSC_0601.jpg.asset.json";
-import aquafitnessTrainerImg from "@/assets/aquafitness-trainer-crop.jpg.asset.json";
+import aquafitnessTrainerImg from "@/assets/aquafitness-trainer-new.png.asset.json";
 import img3 from "@/assets/aqua-fun-animation.jpg.asset.json";
 import img4 from "@/assets/wb-DSC_0762-Kopie.jpg.asset.json";
 import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
