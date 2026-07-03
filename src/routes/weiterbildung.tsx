@@ -5,7 +5,7 @@ import heroImg from "@/assets/weiterbildung-hero.jpg.asset.json";
 import img1 from "@/assets/wb-DSC_0601.jpg.asset.json";
 import aquafitnessTrainerImg from "@/assets/aquafitness-trainer-new.png.asset.json";
 import img3 from "@/assets/wb-Event-Aqua-Zumba.jpg.asset.json";
-import img4 from "@/assets/wb-DSC_0762-Kopie.jpg.asset.json";
+import aquaCreativImg from "@/assets/aqua-creativ.jpg.asset.json";
 import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
 import img6 from "@/assets/wb-DSCN6709.jpg.asset.json";
 import aquaDanceImg from "@/assets/aqua-dance.jpg.asset.json";
@@ -61,7 +61,7 @@ const items = [
     title: "Aqua Creativ",
     text: "Sie sind schon Aqua Fitness Trainer, haben viel Erfahrung und hunderte von Teilnehmern geführt. Doch so manches Mal gehen Ihnen die Ideen aus? Wir haben sie für Sie: Ideen zur kreativen Gestaltung Ihrer Aqua Fitness Kurse. Wir zeigen Ihnen viele Möglichkeiten – unter anderem mit Alltagsthemen und Situationen kreativ umgesetzt, Tanz im und mit dem Wasser, Kampfsport, viele andere Sportarten miteinander kombiniert, Flach- und Tiefwassertraining sowie Training mit und ohne Gerät. Unendlich viele neue, verrückte und spannende Ideen – und viel Spaß im gemeinsamen Austausch!",
     duration: "1 Tag",
-    image: img4.url,
+    image: aquaCreativImg.url,
   },
   {
     title: "Aqua Bootcamp Training",
