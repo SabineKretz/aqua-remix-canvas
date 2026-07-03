@@ -79,7 +79,7 @@ const items = [
     title: "Aqua Dance",
     text: "Die herkömmliche Aqua Fitness aufgepeppt mit heißen Rhythmen und der Vielfalt, die der klassische, Standard-, Modern- und populäre Tanz bietet, begeistert jung und alt. Let's dance!",
     duration: "1 Tag",
-    image: img7.url,
+    image: aquaDanceImg.url,
   },
 ];
 
