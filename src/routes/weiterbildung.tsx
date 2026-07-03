@@ -84,7 +84,7 @@ const items = [
   },
   {
     title: "Aqua Spinning",
-    text: "Intensives Cardio-Training auf dem Aqua-Bike im Pool: mit Musik, Herz und Power in jedes Takt schwitzen und die Wasserdynamik optimal nutzen. Ideal für alle, die eine neue, wassergestützte Ausdauer-Challenge suchen!",
+    text: "Intensives Cardio-Training auf dem Aqua-Bike im Pool: mit Musik, Herz und Power im Takt schwitzen und die Wasserdynamik optimal nutzen. Ideal für alle, die eine neue, wassergestützte Ausdauer-Challenge suchen!",
     duration: "1 Tag",
     image: aquaSpinningImg.url,
   },
