@@ -47,7 +47,7 @@ const items = [
   },
   {
     title: "Aqua Fun & Animation",
-    text: "Viele abwechslungsreiche Ideen für kleine Schwimmhallen bis hin zu Erlebnisbädern. Für die ganze Familie, Mutti mit Baby, Teenies, usw. Erlebnistage, Themennachmittage, Kurse.",
+    text: "Viele abwechslungsreiche Ideen für kleine Schwimmhallen bis hin zu Erlebnisbädern. Für die ganze Familie, Eltern mit Baby, Teenies, usw. Erlebnistage, Themennachmittage, Kurse.",
     duration: "1 Tag",
     image: img3.url,
   },
