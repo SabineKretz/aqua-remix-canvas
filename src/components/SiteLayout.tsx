@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Waves } from "lucide-react";
-import logoAsset from "@/assets/aqua-magic-logo.png.asset.json";
+import logoUrl from "@/assets/aqua-magic-logo.png";
 
 const nav = [
   { to: "/", label: "Start" },
@@ -23,7 +23,7 @@ export function SiteLayout() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-border">
         <div className="mx-auto max-w-7xl px-6 h-18 flex items-center justify-between py-4">
           <Link to="/" className="flex items-center group">
-            <img src={logoAsset.url} alt="aqua-magic Deutschland" className="h-12 w-auto group-hover:scale-105 transition-transform" />
+            <img src={logoUrl} alt="aqua-magic Deutschland" className="h-12 w-auto group-hover:scale-105 transition-transform" />
           </Link>
           <nav className="hidden lg:flex items-center gap-1">
             {nav.map((n) => {
@@ -77,7 +77,7 @@ export function SiteLayout() {
         <div className="mx-auto max-w-7xl px-6 py-16 grid md:grid-cols-3 gap-10">
           <div>
             <div className="mb-4 inline-block rounded-2xl bg-primary-foreground p-3">
-              <img src={logoAsset.url} alt="aqua-magic Deutschland" className="h-14 w-auto" />
+              <img src={logoUrl} alt="aqua-magic Deutschland" className="h-14 w-auto" />
             </div>
             <p className="text-sm text-primary-foreground/70 max-w-xs">
               Ihr Partner für Gesundheit, Aqua Fitness und betriebliches Gesundheitsmanagement seit 1997.
