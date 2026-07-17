@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Waves, Dumbbell, GraduationCap, Building2, Heart, Sparkles } from "lucide-react";
-import logoAsset from "@/assets/aqua-magic-logo.png.asset.json";
+import logoUrl from "@/assets/aqua-magic-logo.png";
 import heroImg from "@/assets/hero-water.jpg";
 import aquaImg from "@/assets/aquafitness.jpg";
 import bootcampImg from "@/assets/bootcamp.jpg";
@@ -56,7 +56,7 @@ function Home() {
               </div>
             </div>
             <div className="flex-shrink-0 lg:mt-10">
-              <img src={logoAsset.url} alt="aqua-magic Deutschland Logo" className="h-24 md:h-36 lg:h-48 w-auto drop-shadow-2xl" />
+              <img src={logoUrl} alt="aqua-magic Deutschland Logo" className="h-24 md:h-36 lg:h-48 w-auto drop-shadow-2xl" />
             </div>
           </div>
         </div>
