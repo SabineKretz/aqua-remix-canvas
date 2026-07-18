@@ -1,7 +1,7 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Waves } from "lucide-react";
-import logoUrl from "@/assets/aqua-magic-logo.jpg";
+import logoUrl from "@/assets/aqua-magic-logo.png";
 
 const nav = [
   { to: "/", label: "Start" },
