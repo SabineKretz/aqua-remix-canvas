@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Check } from "lucide-react";
 import img from "@/assets/coaching.jpg";
-import certAsset from "@/assets/praevention-zertifikat.jpg.asset.json";
+import certAsset from "@/assets/praevention-zertifikat.jpg";
 
 export const Route = createFileRoute("/coaching")({
   head: () => ({
@@ -46,7 +46,7 @@ function Page() {
             </div>
             <div className="flex justify-center md:justify-end">
               <div className="aspect-square w-full max-w-[180px] rounded-full bg-white p-4 flex items-center justify-center shadow-sm">
-                <img src={certAsset.url} alt="Deutscher Standard Prävention – geprüft und zertifiziert" className="w-full h-full object-contain rounded-full" />
+                <img src={certAsset} alt="Deutscher Standard Prävention – geprüft und zertifiziert" className="w-full h-full object-contain rounded-full" />
               </div>
             </div>
           </div>
