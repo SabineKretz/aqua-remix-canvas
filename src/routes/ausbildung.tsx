@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { GraduationCap, ArrowRight } from "lucide-react";
 import img from "@/assets/ausbildung.jpg";
-import aquaFitnessImg from "@/assets/aus-aqua-fitness-trainer.jpg.asset.json";
-import fitBoardImg from "@/assets/aus-fit-board.jpg.asset.json";
-import babyImg from "@/assets/aus-babyschwimmen.jpg.asset.json";
-import bodySoulImg from "@/assets/aus-aqua-body-soul.jpg.asset.json";
-import prePostnatalImg from "@/assets/pre-postnatal-aqua.png.asset.json";
+import aquaFitnessImg from "@/assets/aus-aqua-fitness-trainer-v2.jpg.asset.json";
+import fitBoardImg from "@/assets/aus-fit-board-v2.jpg.asset.json";
+import babyImg from "@/assets/aus-babyschwimmen-v2.jpg.asset.json";
+import bodySoulImg from "@/assets/aus-body-soul-v2.jpg.asset.json";
+import prePostnatalImg from "@/assets/aus-pre-postnatal-v2.png.asset.json";
 
 export const Route = createFileRoute("/ausbildung")({
   head: () => ({
