@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Waves, Dumbbell, GraduationCap, Building2, Heart, Sparkles } from "lucide-react";
-import logoUrl from "@/assets/aqua-magic-logo.png";
+import logoUrl from "@/assets/aqua-magic-logo.jpg";
 import heroImg from "@/assets/hero-water.jpg";
 import aquaImg from "@/assets/aquafitness.jpg";
 import bootcampImg from "@/assets/bootcamp.jpg";
