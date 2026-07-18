@@ -1,17 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { Clock } from "lucide-react";
-import heroImg from "@/assets/weiterbildung-hero.jpg.asset.json";
-import img1 from "@/assets/wb-DSC_0601.jpg.asset.json";
-import aquafitnessTrainerImg from "@/assets/aquafitness-trainer-new.png.asset.json";
-import img3 from "@/assets/wb-Event-Aqua-Zumba.jpg.asset.json";
-import aquaCreativImg from "@/assets/aqua-creativ.jpg.asset.json";
-import img5 from "@/assets/wb-DSC_1184.jpg.asset.json";
-import img6 from "@/assets/wb-DSCN6709.jpg.asset.json";
-import aquaDanceImg from "@/assets/aqua-dance.jpg.asset.json";
-import babyImg from "@/assets/babyschwimmen2.jpg.asset.json";
-import aquaKidsFunImg from "@/assets/aqua-kids-fun.jpg.asset.json";
-import aquaSpinningImg from "@/assets/aqua-spinning.jpg.asset.json";
+import heroImg from "@/assets/weiterbildung-hero.jpg";
+import img1 from "@/assets/wb-DSC_0601.jpg";
+import aquafitnessTrainerImg from "@/assets/aquafitness-trainer-new.png";
+import img3 from "@/assets/wb-Event-Aqua-Zumba.jpg";
+import aquaCreativImg from "@/assets/aqua-creativ.jpg";
+import img5 from "@/assets/wb-DSC_1184.jpg";
+import img6 from "@/assets/wb-DSCN6709.jpg";
+import aquaDanceImg from "@/assets/aqua-dance.jpg";
+import babyImg from "@/assets/babyschwimmen2.jpg";
+import aquaKidsFunImg from "@/assets/aqua-kids-fun.jpg";
+import aquaSpinningImg from "@/assets/aqua-spinning.jpg";
 
 export const Route = createFileRoute("/weiterbildung")({
   head: () => ({
@@ -32,61 +32,61 @@ const items = [
     title: "Motivation für Schwimmlehrer",
     text: "Sie leiten Schwimmkurse und wollen sich selbst und Ihre Teilnehmer mit neuen Ideen und Ansätzen begeistern? Wir haben ein Persönlichkeitstraining mit modernen Trainingsformen für Sie, damit sie die Kinder und Eltern gleichermaßen begeistern und ein modernes Schwimmtraining präsentieren können.",
     duration: "1 Tag",
-    image: img1.url,
+    image: img1,
   },
   {
     title: "Motivation für Aquafitness-Trainer",
     text: "Sie leiten Aqua Fitness Kurse und wollen sich selbst und Ihre Teilnehmer mit neuen Ideen und Ansätzen begeistern? Wir haben ein Persönlichkeitstraining mit modernen Trainingsformen für Sie, damit sie Ihre Gäste begeistern werden und Ihnen neue Ideen präsentieren können.",
     duration: "1 Tag",
-    image: aquafitnessTrainerImg.url,
+    image: aquafitnessTrainerImg,
   },
   {
     title: "Baby- und Bambini Spaß",
     text: "Auffrischung für Babyschwimmlehrer die gerne viele neue Ideen und Austausch möchten.",
     duration: "1 Tag",
-    image: babyImg.url,
+    image: babyImg,
   },
   {
     title: "Aqua Fun & Animation",
     text: "Viele abwechslungsreiche Ideen für kleine Schwimmhallen bis hin zu Erlebnisbädern. Für die ganze Familie, Eltern mit Baby, Teenies, usw. Erlebnistage, Themennachmittage, Kurse.",
     duration: "1 Tag",
-    image: img3.url,
+    image: img3,
   },
   {
     title: "Aqua Kid`s Fun",
     text: "Schwimmen lernen mal anders! – die etwas andere Schwimmausbildung. Zeitgemäßes Unterrichten auch für „Problem Kinder“! Grundlagen, Physiologie, Psychologie, Trainingslehre, Trainingsformen, Methodik, Didaktik, Kursaufbau, Marketing.",
     duration: "2 Tage",
-    image: aquaKidsFunImg.url,
+    image: aquaKidsFunImg,
   },
   {
     title: "Aqua Creativ",
     text: "Sie sind schon Aqua Fitness Trainer, haben viel Erfahrung und hunderte von Teilnehmern geführt. Doch so manches Mal gehen Ihnen die Ideen aus? Wir haben sie für Sie: Ideen zur kreativen Gestaltung Ihrer Aqua Fitness Kurse. Wir zeigen Ihnen viele Möglichkeiten – unter anderem mit Alltagsthemen und Situationen kreativ umgesetzt, Tanz im und mit dem Wasser, Kampfsport, viele andere Sportarten miteinander kombiniert, Flach- und Tiefwassertraining sowie Training mit und ohne Gerät. Unendlich viele neue, verrückte und spannende Ideen – und viel Spaß im gemeinsamen Austausch!",
     duration: "1 Tag",
-    image: aquaCreativImg.url,
+    image: aquaCreativImg,
   },
   {
     title: "Aqua Bootcamp Training",
     text: "Mit Spaß gesünder sein, mit Spaß aktiver werden, der Betonwüste entkommen und mehr Zeit an der frischen Luft verbringen (Freibad), sich natürlich bewegen und an individuelle Grenzen gehen, eigene Ziele erreichen, im Teamspirit sich gegenseitig unterstützen und motivieren, gemeinsam langfristigen Erfolg haben. Dieses Training ist auch für Mannschaften und Teams geeignet!",
     duration: "1 Tag",
-    image: img5.url,
+    image: img5,
   },
   {
     title: "Aqua Fight",
     text: "Der Power-Kurs für alle Fighter! Männer sind hier herzlich willkommen – genauso wie jeder, der sich mit coolen Moves und Elementen aus Kickboxen, Boxen, Karate und Tai Chi fit halten will!",
     duration: "1 Tag",
-    image: img6.url,
+    image: img6,
   },
   {
     title: "Aqua Dance",
     text: "Die herkömmliche Aqua Fitness aufgepeppt mit heißen Rhythmen und der Vielfalt, die der klassische, Standard-, Modern- und populäre Tanz bietet, begeistert jung und alt. Let's dance!",
     duration: "1 Tag",
-    image: aquaDanceImg.url,
+    image: aquaDanceImg,
   },
   {
     title: "Aqua Spinning",
     text: "Intensives Cardio-Training auf dem Aqua-Bike im Pool: mit Musik, Herz und Power im Takt schwitzen und die Wasserdynamik optimal nutzen. Ideal für alle, die eine neue, wassergestützte Ausdauer-Challenge suchen!",
     duration: "1 Tag",
-    image: aquaSpinningImg.url,
+    image: aquaSpinningImg,
   },
 ];
 
@@ -97,7 +97,7 @@ function Page() {
         eyebrow="Weiterbildung"
         title="Weiterbildung bei Aqua Magic."
         subtitle="Neue Impulse, frische Ideen und Persönlichkeitstraining für Schwimmlehrer und Aqua-Fitness-Trainer."
-        image={heroImg.url}
+        image={heroImg}
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20">

@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
 import { GraduationCap, ArrowRight } from "lucide-react";
 import img from "@/assets/ausbildung.jpg";
-import aquaFitnessImg from "@/assets/aus-aqua-fitness-trainer-v2.jpg.asset.json";
-import fitBoardImg from "@/assets/aus-fit-board-v2.jpg.asset.json";
-import babyImg from "@/assets/aus-babyschwimmen-v2.jpg.asset.json";
-import bodySoulImg from "@/assets/aus-body-soul-v2.jpg.asset.json";
-import prePostnatalImg from "@/assets/aus-pre-postnatal-v2.png.asset.json";
+import aquaFitnessImg from "@/assets/aus-aqua-fitness-trainer-v2.jpg";
+import fitBoardImg from "@/assets/aus-fit-board-v2.jpg";
+import babyImg from "@/assets/aus-babyschwimmen-v2.jpg";
+import bodySoulImg from "@/assets/aus-body-soul-v2.jpg";
+import prePostnatalImg from "@/assets/aus-pre-postnatal-v2.png";
 
 export const Route = createFileRoute("/ausbildung")({
   head: () => ({
@@ -19,11 +19,11 @@ export const Route = createFileRoute("/ausbildung")({
 });
 
 const courses = [
-  { title: "Aqua Fitness Trainer", desc: "Die fundierte Ausbildung zum zertifizierten Aqua Fitness Trainer.", image: aquaFitnessImg.url },
-  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training.", image: fitBoardImg.url },
-  { title: "Baby- & Bambinischwimmen", desc: "Wassergewöhnung und Bewegungs­förderung für die Kleinsten.", image: babyImg.url },
-  { title: "Prä- & Postnatales Aquatraining", desc: "Spezialisiertes Training für die Zeit vor und nach der Geburt.", image: prePostnatalImg.url },
-  { title: "Aqua Body & Soul Balancing", desc: "Wellness und Entspannung im Wasser — für Körper und Seele.", image: bodySoulImg.url },
+  { title: "Aqua Fitness Trainer", desc: "Die fundierte Ausbildung zum zertifizierten Aqua Fitness Trainer.", image: aquaFitnessImg },
+  { title: "Fit Board", desc: "Ausbildung am innovativen Wasser-Board für dynamisches Training.", image: fitBoardImg },
+  { title: "Baby- & Bambinischwimmen", desc: "Wassergewöhnung und Bewegungs­förderung für die Kleinsten.", image: babyImg },
+  { title: "Prä- & Postnatales Aquatraining", desc: "Spezialisiertes Training für die Zeit vor und nach der Geburt.", image: prePostnatalImg },
+  { title: "Aqua Body & Soul Balancing", desc: "Wellness und Entspannung im Wasser — für Körper und Seele.", image: bodySoulImg },
 ];
 
 function Page() {
