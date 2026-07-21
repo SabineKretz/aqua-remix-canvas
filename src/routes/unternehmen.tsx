@@ -41,7 +41,7 @@ function Page() {
               <Facebook className="size-4" /> Facebook
             </a>
             <a
-              href="https://www.instagram.com/aqua_magic_deutschland_/""
+              href="https://www.instagram.com/aqua_magic_deutschland_/
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition text-sm font-medium"
