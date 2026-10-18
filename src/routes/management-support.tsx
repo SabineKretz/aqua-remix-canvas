@@ -3,10 +3,9 @@ import { ArrowRight, Check, Users, CalendarDays, HeartHandshake, Lightbulb, Comp
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { managementPackages } from "@/lib/management-support";
-import teamImage from "@/assets/management-support-team.jpg";
-import image1 from "@/assets/management-support-1.jpg";
-import image2 from "@/assets/management-support-2.jpg";
-import image3 from "@/assets/management-support-3.jpg";
+import heroImage from "@/assets/management-support-3.jpg";
+import offerImage from "@/assets/management-support-2.jpg";
+import wavesBackground from "@/assets/waves-background.jpg";
 
 export const Route = createFileRoute("/management-support")({
   head: () => ({ meta: [
@@ -26,11 +25,6 @@ const services = [
   { icon: CalendarDays, text: "Jahresplanung, Veranstaltungen und neue Projekte" },
   { icon: HeartHandshake, text: "Kundenbindung und Weiterentwicklung Ihres Hauses" },
   { icon: Compass, text: "Aktuelle Herausforderungen und wichtige Entscheidungen" },
-];
-const images = [
-  { src: image1, title: "Management Support – Angebote im Überblick" },
-  { src: image2, title: "Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" },
-  { src: image3, title: "Gemeinsam mehr bewegen – Aqua Magic Management Support" },
 ];
 
 function ManagementSupport() {
