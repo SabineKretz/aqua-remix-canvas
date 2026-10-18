@@ -3,10 +3,9 @@ import { ArrowRight, Check, Users, CalendarDays, HeartHandshake, Lightbulb, Comp
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { managementPackages } from "@/lib/management-support";
-import teamImage from "@/assets/management-support-team.jpg";
-import image1 from "@/assets/management-support-1.jpg";
-import image2 from "@/assets/management-support-2.jpg";
-import image3 from "@/assets/management-support-3.jpg";
+import heroImage from "@/assets/management-support-3.jpg";
+import offerImage from "@/assets/management-support-2.jpg";
+import wavesBackground from "@/assets/waves-background.jpg";
 
 export const Route = createFileRoute("/management-support")({
   head: () => ({ meta: [
@@ -27,16 +26,11 @@ const services = [
   { icon: HeartHandshake, text: "Kundenbindung und Weiterentwicklung Ihres Hauses" },
   { icon: Compass, text: "Aktuelle Herausforderungen und wichtige Entscheidungen" },
 ];
-const images = [
-  { src: image1, title: "Management Support – Angebote im Überblick" },
-  { src: image2, title: "Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" },
-  { src: image3, title: "Gemeinsam mehr bewegen – Aqua Magic Management Support" },
-];
 
 function ManagementSupport() {
   return <>
     <section className="relative isolate overflow-hidden bg-deep text-primary-foreground">
-      <img src={teamImage} alt="Das Aqua Magic Team am Schwimmbecken" className="absolute inset-0 -z-20 size-full object-cover object-top" />
+      <img src={heroImage} alt="Gemeinsam mehr bewegen – Aqua Magic Management Support" className="absolute inset-0 -z-20 size-full object-cover object-center" />
       <div className="absolute inset-0 -z-10 bg-deep/75" />
       <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <p className="text-sm font-semibold uppercase mb-5">Business Coaching · Neu bei Aqua Magic</p>
@@ -90,8 +84,22 @@ function ManagementSupport() {
           <Button asChild variant="outline" className="w-full"><Link to="/unternehmen">Gespräch anfragen <ArrowRight /></Link></Button>
         </article>)}
       </div>
-      <div className="grid md:grid-cols-3 items-start gap-6 mt-16">
-        {images.map(image => <Dialog key={image.src}><DialogTrigger asChild><Button variant="ghost" className="group relative block h-auto w-full p-0 overflow-hidden rounded-lg" aria-label={`${image.title} – vergrößern`}><img src={image.src} alt={image.title} loading="lazy" className="w-full h-auto" /><span className="absolute bottom-3 right-3 bg-background text-foreground p-2 rounded-full shadow-soft"><Expand className="size-5" /></span></Button></DialogTrigger><DialogContent className="max-w-4xl max-h-[90dvh] overflow-y-auto"><DialogTitle className="pr-8">{image.title}</DialogTitle><img src={image.src} alt={image.title} className="w-full h-auto" /></DialogContent></Dialog>)}
+      <div className="relative mt-16 overflow-hidden rounded-xl border border-border isolate">
+        <img src={wavesBackground} alt="" aria-hidden="true" className="absolute inset-0 -z-10 size-full object-cover" width={1920} height={768} />
+        <div className="py-8 md:py-12 flex justify-center px-6">
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button variant="ghost" className="group relative block h-auto w-full md:w-[70%] p-0 overflow-hidden rounded-lg shadow-soft" aria-label="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken! – vergrößern">
+                <img src={offerImage} alt="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" loading="lazy" className="w-full h-auto" />
+                <span className="absolute bottom-3 right-3 bg-background text-foreground p-2 rounded-full shadow-soft"><Expand className="size-5" /></span>
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl max-h-[90dvh] overflow-y-auto">
+              <DialogTitle className="pr-8">Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!</DialogTitle>
+              <img src={offerImage} alt="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" className="w-full h-auto" />
+            </DialogContent>
+          </Dialog>
+        </div>
       </div>
     </section>
 
