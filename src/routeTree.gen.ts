@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as WeiterbildungRouteImport } from './routes/weiterbildung'
 import { Route as UnternehmenRouteImport } from './routes/unternehmen'
+import { Route as ManagementSupportRouteImport } from './routes/management-support'
 import { Route as InhouseRouteImport } from './routes/inhouse'
 import { Route as ImpressumRouteImport } from './routes/impressum'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
@@ -29,6 +30,11 @@ const WeiterbildungRoute = WeiterbildungRouteImport.update({
 const UnternehmenRoute = UnternehmenRouteImport.update({
   id: '/unternehmen',
   path: '/unternehmen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManagementSupportRoute = ManagementSupportRouteImport.update({
+  id: '/management-support',
+  path: '/management-support',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InhouseRoute = InhouseRouteImport.update({
@@ -87,6 +93,7 @@ export interface FileRoutesByFullPath {
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
   '/inhouse': typeof InhouseRoute
+  '/management-support': typeof ManagementSupportRoute
   '/unternehmen': typeof UnternehmenRoute
   '/weiterbildung': typeof WeiterbildungRoute
 }
@@ -100,6 +107,7 @@ export interface FileRoutesByTo {
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
   '/inhouse': typeof InhouseRoute
+  '/management-support': typeof ManagementSupportRoute
   '/unternehmen': typeof UnternehmenRoute
   '/weiterbildung': typeof WeiterbildungRoute
 }
@@ -114,6 +122,7 @@ export interface FileRoutesById {
   '/datenschutz': typeof DatenschutzRoute
   '/impressum': typeof ImpressumRoute
   '/inhouse': typeof InhouseRoute
+  '/management-support': typeof ManagementSupportRoute
   '/unternehmen': typeof UnternehmenRoute
   '/weiterbildung': typeof WeiterbildungRoute
 }
@@ -129,6 +138,7 @@ export interface FileRouteTypes {
     | '/datenschutz'
     | '/impressum'
     | '/inhouse'
+    | '/management-support'
     | '/unternehmen'
     | '/weiterbildung'
   fileRoutesByTo: FileRoutesByTo
@@ -142,6 +152,7 @@ export interface FileRouteTypes {
     | '/datenschutz'
     | '/impressum'
     | '/inhouse'
+    | '/management-support'
     | '/unternehmen'
     | '/weiterbildung'
   id:
@@ -155,6 +166,7 @@ export interface FileRouteTypes {
     | '/datenschutz'
     | '/impressum'
     | '/inhouse'
+    | '/management-support'
     | '/unternehmen'
     | '/weiterbildung'
   fileRoutesById: FileRoutesById
@@ -169,6 +181,7 @@ export interface RootRouteChildren {
   DatenschutzRoute: typeof DatenschutzRoute
   ImpressumRoute: typeof ImpressumRoute
   InhouseRoute: typeof InhouseRoute
+  ManagementSupportRoute: typeof ManagementSupportRoute
   UnternehmenRoute: typeof UnternehmenRoute
   WeiterbildungRoute: typeof WeiterbildungRoute
 }
@@ -187,6 +200,13 @@ declare module '@tanstack/react-router' {
       path: '/unternehmen'
       fullPath: '/unternehmen'
       preLoaderRoute: typeof UnternehmenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/management-support': {
+      id: '/management-support'
+      path: '/management-support'
+      fullPath: '/management-support'
+      preLoaderRoute: typeof ManagementSupportRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/inhouse': {
@@ -265,6 +285,7 @@ const rootRouteChildren: RootRouteChildren = {
   DatenschutzRoute: DatenschutzRoute,
   ImpressumRoute: ImpressumRoute,
   InhouseRoute: InhouseRoute,
+  ManagementSupportRoute: ManagementSupportRoute,
   UnternehmenRoute: UnternehmenRoute,
   WeiterbildungRoute: WeiterbildungRoute,
 }
