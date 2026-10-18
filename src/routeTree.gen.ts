@@ -9,67 +9,22 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as WeiterbildungRouteImport } from './routes/weiterbildung'
-import { Route as UnternehmenRouteImport } from './routes/unternehmen'
-import { Route as ManagementSupportRouteImport } from './routes/management-support'
-import { Route as InhouseRouteImport } from './routes/inhouse'
-import { Route as ImpressumRouteImport } from './routes/impressum'
-import { Route as DatenschutzRouteImport } from './routes/datenschutz'
-import { Route as CoachingRouteImport } from './routes/coaching'
-import { Route as BootcampRouteImport } from './routes/bootcamp'
-import { Route as AusbildungRouteImport } from './routes/ausbildung'
-import { Route as AquafitnessRouteImport } from './routes/aquafitness'
-import { Route as AgbRouteImport } from './routes/agb'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AgbRouteImport } from './routes/agb'
+import { Route as AquafitnessRouteImport } from './routes/aquafitness'
+import { Route as AusbildungRouteImport } from './routes/ausbildung'
+import { Route as BootcampRouteImport } from './routes/bootcamp'
+import { Route as CoachingRouteImport } from './routes/coaching'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as InhouseRouteImport } from './routes/inhouse'
+import { Route as ManagementSupportRouteImport } from './routes/management-support'
+import { Route as UnternehmenRouteImport } from './routes/unternehmen'
+import { Route as WeiterbildungRouteImport } from './routes/weiterbildung'
 
-const WeiterbildungRoute = WeiterbildungRouteImport.update({
-  id: '/weiterbildung',
-  path: '/weiterbildung',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const UnternehmenRoute = UnternehmenRouteImport.update({
-  id: '/unternehmen',
-  path: '/unternehmen',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ManagementSupportRoute = ManagementSupportRouteImport.update({
-  id: '/management-support',
-  path: '/management-support',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const InhouseRoute = InhouseRouteImport.update({
-  id: '/inhouse',
-  path: '/inhouse',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ImpressumRoute = ImpressumRouteImport.update({
-  id: '/impressum',
-  path: '/impressum',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DatenschutzRoute = DatenschutzRouteImport.update({
-  id: '/datenschutz',
-  path: '/datenschutz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CoachingRoute = CoachingRouteImport.update({
-  id: '/coaching',
-  path: '/coaching',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BootcampRoute = BootcampRouteImport.update({
-  id: '/bootcamp',
-  path: '/bootcamp',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AusbildungRoute = AusbildungRouteImport.update({
-  id: '/ausbildung',
-  path: '/ausbildung',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AquafitnessRoute = AquafitnessRouteImport.update({
-  id: '/aquafitness',
-  path: '/aquafitness',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AgbRoute = AgbRouteImport.update({
@@ -77,9 +32,54 @@ const AgbRoute = AgbRouteImport.update({
   path: '/agb',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const AquafitnessRoute = AquafitnessRouteImport.update({
+  id: '/aquafitness',
+  path: '/aquafitness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AusbildungRoute = AusbildungRouteImport.update({
+  id: '/ausbildung',
+  path: '/ausbildung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BootcampRoute = BootcampRouteImport.update({
+  id: '/bootcamp',
+  path: '/bootcamp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoachingRoute = CoachingRouteImport.update({
+  id: '/coaching',
+  path: '/coaching',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InhouseRoute = InhouseRouteImport.update({
+  id: '/inhouse',
+  path: '/inhouse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ManagementSupportRoute = ManagementSupportRouteImport.update({
+  id: '/management-support',
+  path: '/management-support',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UnternehmenRoute = UnternehmenRouteImport.update({
+  id: '/unternehmen',
+  path: '/unternehmen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeiterbildungRoute = WeiterbildungRouteImport.update({
+  id: '/weiterbildung',
+  path: '/weiterbildung',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -188,74 +188,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/weiterbildung': {
-      id: '/weiterbildung'
-      path: '/weiterbildung'
-      fullPath: '/weiterbildung'
-      preLoaderRoute: typeof WeiterbildungRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/unternehmen': {
-      id: '/unternehmen'
-      path: '/unternehmen'
-      fullPath: '/unternehmen'
-      preLoaderRoute: typeof UnternehmenRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/management-support': {
-      id: '/management-support'
-      path: '/management-support'
-      fullPath: '/management-support'
-      preLoaderRoute: typeof ManagementSupportRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/inhouse': {
-      id: '/inhouse'
-      path: '/inhouse'
-      fullPath: '/inhouse'
-      preLoaderRoute: typeof InhouseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/impressum': {
-      id: '/impressum'
-      path: '/impressum'
-      fullPath: '/impressum'
-      preLoaderRoute: typeof ImpressumRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/datenschutz': {
-      id: '/datenschutz'
-      path: '/datenschutz'
-      fullPath: '/datenschutz'
-      preLoaderRoute: typeof DatenschutzRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/coaching': {
-      id: '/coaching'
-      path: '/coaching'
-      fullPath: '/coaching'
-      preLoaderRoute: typeof CoachingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/bootcamp': {
-      id: '/bootcamp'
-      path: '/bootcamp'
-      fullPath: '/bootcamp'
-      preLoaderRoute: typeof BootcampRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/ausbildung': {
-      id: '/ausbildung'
-      path: '/ausbildung'
-      fullPath: '/ausbildung'
-      preLoaderRoute: typeof AusbildungRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/aquafitness': {
-      id: '/aquafitness'
-      path: '/aquafitness'
-      fullPath: '/aquafitness'
-      preLoaderRoute: typeof AquafitnessRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/agb': {
@@ -265,11 +202,74 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AgbRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/aquafitness': {
+      id: '/aquafitness'
+      path: '/aquafitness'
+      fullPath: '/aquafitness'
+      preLoaderRoute: typeof AquafitnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ausbildung': {
+      id: '/ausbildung'
+      path: '/ausbildung'
+      fullPath: '/ausbildung'
+      preLoaderRoute: typeof AusbildungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bootcamp': {
+      id: '/bootcamp'
+      path: '/bootcamp'
+      fullPath: '/bootcamp'
+      preLoaderRoute: typeof BootcampRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coaching': {
+      id: '/coaching'
+      path: '/coaching'
+      fullPath: '/coaching'
+      preLoaderRoute: typeof CoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inhouse': {
+      id: '/inhouse'
+      path: '/inhouse'
+      fullPath: '/inhouse'
+      preLoaderRoute: typeof InhouseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/management-support': {
+      id: '/management-support'
+      path: '/management-support'
+      fullPath: '/management-support'
+      preLoaderRoute: typeof ManagementSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/unternehmen': {
+      id: '/unternehmen'
+      path: '/unternehmen'
+      fullPath: '/unternehmen'
+      preLoaderRoute: typeof UnternehmenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/weiterbildung': {
+      id: '/weiterbildung'
+      path: '/weiterbildung'
+      fullPath: '/weiterbildung'
+      preLoaderRoute: typeof WeiterbildungRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
