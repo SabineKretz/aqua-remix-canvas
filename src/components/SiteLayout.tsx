@@ -1,6 +1,8 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Waves } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import logoUrl from "@/assets/aqua-magic-logo.png";
 
 const nav = [
@@ -10,8 +12,13 @@ const nav = [
   { to: "/ausbildung", label: "Ausbildung" },
   { to: "/weiterbildung", label: "Weiterbildung" },
   { to: "/inhouse", label: "Inhouse" },
-  { to: "/coaching", label: "BGM" },
+  { to: "/coaching", label: "Business Coaching" },
   { to: "/unternehmen", label: "Über uns" },
+] as const;
+
+const coachingNav = [
+  { to: "/coaching", label: "BGM" },
+  { to: "/management-support", label: "Management Support" },
 ] as const;
 
 export function SiteLayout() {
@@ -25,8 +32,23 @@ export function SiteLayout() {
           <Link to="/" className="flex items-center group">
             <img src={logoUrl} alt="aqua-magic Deutschland" className="h-12 w-auto group-hover:scale-105 transition-transform" />
           </Link>
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav aria-label="Hauptnavigation" className="hidden xl:flex items-center gap-1">
             {nav.map((n) => {
+              if (n.to === "/coaching") {
+                const active = coachingNav.some((item) => loc.pathname === item.to);
+                return (
+                  <DropdownMenu key={n.to}>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" className={`rounded-full px-3 ${active ? "bg-primary text-primary-foreground" : "text-foreground/70"}`}>
+                        Business Coaching <ChevronDown className="size-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start" className="min-w-52">
+                      {coachingNav.map((item) => <DropdownMenuItem key={item.to} asChild><Link to={item.to} aria-current={loc.pathname === item.to ? "page" : undefined}>{item.label}</Link></DropdownMenuItem>)}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
               const active = loc.pathname === n.to;
               return (
                 <Link
@@ -43,18 +65,25 @@ export function SiteLayout() {
           </nav>
           <Link
             to="/unternehmen"
-            className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition shadow-soft"
+            className="hidden xl:inline-flex items-center px-5 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition shadow-soft"
           >
             Kontakt
           </Link>
-          <button onClick={() => setOpen(!open)} className="lg:hidden p-2 rounded-lg hover:bg-secondary" aria-label="Menu">
+          <Button variant="ghost" size="icon" onClick={() => setOpen(!open)} className="xl:hidden" aria-label="Menü" aria-expanded={open} aria-controls="mobile-navigation">
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
-          </button>
+          </Button>
         </div>
         {open && (
-          <div className="lg:hidden border-t border-border bg-background">
+          <div id="mobile-navigation" className="xl:hidden border-t border-border bg-background max-h-[calc(100dvh-80px)] overflow-y-auto">
             <div className="px-6 py-4 flex flex-col gap-1">
-              {nav.map((n) => (
+              {nav.map((n) => n.to === "/coaching" ? (
+                <div key={n.to}>
+                  <div className="px-3 py-2.5 text-sm font-semibold">Business Coaching</div>
+                  <div className="ml-6 border-l border-border pl-2 flex flex-col">
+                    {coachingNav.map((item) => <Link key={item.to} to={item.to} onClick={() => setOpen(false)} className="px-3 py-2.5 text-sm hover:bg-secondary rounded-lg" aria-current={loc.pathname === item.to ? "page" : undefined}>{item.label}</Link>)}
+                  </div>
+                </div>
+              ) : (
                 <Link
                   key={n.to}
                   to={n.to}
@@ -87,7 +116,7 @@ export function SiteLayout() {
             <h4 className="font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               {nav.map((n) => (
-                <li key={n.to}><Link to={n.to} className="hover:text-accent transition">{n.label}</Link></li>
+                <li key={n.to}>{n.to === "/coaching" ? <><span className="font-medium">Business Coaching</span><ul className="ml-3 mt-2 space-y-2">{coachingNav.map((item) => <li key={item.to}><Link to={item.to} className="hover:text-accent transition">{item.label}</Link></li>)}</ul></> : <Link to={n.to} className="hover:text-accent transition">{n.label}</Link>}</li>
               ))}
             </ul>
           </div>

@@ -9,6 +9,10 @@ export const Route = createFileRoute("/coaching")({
     meta: [
       { title: "Betriebliches Gesundheitsmanagement (BGM) – aqua-magic" },
       { name: "description", content: "Fit for life — Betriebliches Gesundheits­management. Investieren Sie in die Gesundheit Ihrer Mitarbeiter und sichern Sie langfristig die Wertschöpfung Ihres Unternehmens." },
+      { property: "og:title", content: "Betriebliches Gesundheitsmanagement (BGM) – aqua-magic" },
+      { property: "og:description", content: "Fit for life — Betriebliches Gesundheits­management. Investieren Sie in die Gesundheit Ihrer Mitarbeiter und sichern Sie langfristig die Wertschöpfung Ihres Unternehmens." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

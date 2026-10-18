@@ -6,6 +6,10 @@ export const Route = createFileRoute("/agb")({
     meta: [
       { title: "AGB – aqua-magic Deutschland" },
       { name: "description", content: "Allgemeine Geschäftsbedingungen von aqua-magic Deutschland für Kurse, Trainings und Lehrgänge." },
+      { property: "og:title", content: "AGB – aqua-magic Deutschland" },
+      { property: "og:description", content: "Allgemeine Geschäftsbedingungen von aqua-magic Deutschland für Kurse, Trainings und Lehrgänge." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

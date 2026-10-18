@@ -6,6 +6,10 @@ export const Route = createFileRoute("/datenschutz")({
     meta: [
       { title: "Datenschutzerklärung – aqua-magic Deutschland" },
       { name: "description", content: "Informationen zum Datenschutz gemäß DSGVO bei aqua-magic Deutschland." },
+      { property: "og:title", content: "Datenschutzerklärung – aqua-magic Deutschland" },
+      { property: "og:description", content: "Informationen zum Datenschutz gemäß DSGVO bei aqua-magic Deutschland." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

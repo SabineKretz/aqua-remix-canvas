@@ -10,6 +10,10 @@ export const Route = createFileRoute("/bootcamp")({
     meta: [
       { title: "Bootcamp & Saisonvorbereitung – aqua-magic" },
       { name: "description", content: "Bootcamp mit dem Aqua-Magic-Team: 5 Einheiten à 90 Minuten. Verbesserung von Ausdauer, Flexibilität, Koordination — für Teams und Einzelpersonen." },
+      { property: "og:title", content: "Bootcamp & Saisonvorbereitung – aqua-magic" },
+      { property: "og:description", content: "Bootcamp mit dem Aqua-Magic-Team: 5 Einheiten à 90 Minuten. Verbesserung von Ausdauer, Flexibilität, Koordination — für Teams und Einzelpersonen." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

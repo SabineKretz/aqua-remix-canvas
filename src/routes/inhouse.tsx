@@ -9,6 +9,10 @@ export const Route = createFileRoute("/inhouse")({
     meta: [
       { title: "Inhouse Schulungen – aqua-magic" },
       { name: "description", content: "Inhouse Schulungen direkt bei Ihnen vor Ort. Maßgeschneidert für Ihre Mitarbeiter — von Babys bis Senioren, von Aqua Fitness bis Aqua Body & Soul Balancing." },
+      { property: "og:title", content: "Inhouse Schulungen – aqua-magic" },
+      { property: "og:description", content: "Inhouse Schulungen direkt bei Ihnen vor Ort. Maßgeschneidert für Ihre Mitarbeiter — von Babys bis Senioren, von Aqua Fitness bis Aqua Body & Soul Balancing." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

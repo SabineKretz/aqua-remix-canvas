@@ -22,6 +22,10 @@ export const Route = createFileRoute("/weiterbildung")({
         content:
           "Weiterbildungen bei Aqua Magic: Motivation für Schwimmlehrer und Aquafitness-Trainer, Aqua Fun & Animation, Aqua Creativ, Aqua Bootcamp, Aqua Fight und Aqua Dance.",
       },
+      { property: "og:title", content: "Weiterbildung – aqua-magic" },
+      { property: "og:description", content: "Weiterbildungen bei Aqua Magic: Motivation für Schwimmlehrer und Aquafitness-Trainer, Aqua Fun & Animation, Aqua Creativ, Aqua Bootcamp, Aqua Fight und Aqua Dance." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

@@ -8,6 +8,10 @@ export const Route = createFileRoute("/aquafitness")({
     meta: [
       { title: "Aqua Fitness Kurse – aqua-magic Deutschland" },
       { name: "description", content: "Fitness im Wasser für jedes Alter. Gelenkschonend, effektiv und voller Spaß. An verschiedenen Standorten und auf Anfrage auch bei Ihnen." },
+      { property: "og:title", content: "Aqua Fitness Kurse – aqua-magic Deutschland" },
+      { property: "og:description", content: "Fitness im Wasser für jedes Alter. Gelenkschonend, effektiv und voller Spaß. An verschiedenen Standorten und auf Anfrage auch bei Ihnen." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

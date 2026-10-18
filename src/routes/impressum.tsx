@@ -6,6 +6,10 @@ export const Route = createFileRoute("/impressum")({
     meta: [
       { title: "Impressum – aqua-magic Deutschland" },
       { name: "description", content: "Impressum und Nutzungsbedingungen von aqua-magic Deutschland." },
+      { property: "og:title", content: "Impressum – aqua-magic Deutschland" },
+      { property: "og:description", content: "Impressum und Nutzungsbedingungen von aqua-magic Deutschland." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,
