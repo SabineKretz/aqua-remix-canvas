@@ -13,6 +13,10 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "aqua-magic Deutschland – Ihr Partner für Gesundheit seit 1997" },
       { name: "description", content: "5 Säulen für Ihren gesunden Erfolg: Aqua Fitness Kurse, Ausbildung, Bootcamp, Inhouse-Schulungen und BGM. Aqua-Magic Deutschland aus Michelau im Steigerwald." },
+      { property: "og:title", content: "aqua-magic Deutschland – Ihr Partner für Gesundheit seit 1997" },
+      { property: "og:description", content: "5 Säulen für Ihren gesunden Erfolg: Aqua Fitness Kurse, Ausbildung, Bootcamp, Inhouse-Schulungen und BGM. Aqua-Magic Deutschland aus Michelau im Steigerwald." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,

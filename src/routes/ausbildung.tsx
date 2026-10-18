@@ -13,6 +13,10 @@ export const Route = createFileRoute("/ausbildung")({
     meta: [
       { title: "Aus- und Weiterbildung – aqua-magic" },
       { name: "description", content: "Ausbildungen bei Aqua-Magic Deutschland: Fit Board, Aqua Fitness Trainer, Baby- & Bambinischwimmen, Prä- und Postnatales Aquatraining, Aqua Body & Soul Balancing." },
+      { property: "og:title", content: "Aus- und Weiterbildung – aqua-magic" },
+      { property: "og:description", content: "Ausbildungen bei Aqua-Magic Deutschland: Fit Board, Aqua Fitness Trainer, Baby- & Bambinischwimmen, Prä- und Postnatales Aquatraining, Aqua Body & Soul Balancing." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,

@@ -7,6 +7,10 @@ export const Route = createFileRoute("/unternehmen")({
     meta: [
       { title: "Unternehmen & Kontakt – aqua-magic Deutschland" },
       { name: "description", content: "Aqua-Magic Deutschland aus Michelau im Steigerwald. Ihr Partner für Gesundheit, Aqua Fitness und BGM seit 1997. Kontaktieren Sie uns." },
+      { property: "og:title", content: "Unternehmen & Kontakt – aqua-magic Deutschland" },
+      { property: "og:description", content: "Aqua-Magic Deutschland aus Michelau im Steigerwald. Ihr Partner für Gesundheit, Aqua Fitness und BGM seit 1997. Kontaktieren Sie uns." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Page,
