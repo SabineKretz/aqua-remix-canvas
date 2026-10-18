@@ -30,7 +30,7 @@ const services = [
 function ManagementSupport() {
   return <>
     <section className="relative isolate overflow-hidden bg-deep text-primary-foreground">
-      <img src={teamImage} alt="Das Aqua Magic Team am Schwimmbecken" className="absolute inset-0 -z-20 size-full object-cover object-top" />
+      <img src={heroImage} alt="Gemeinsam mehr bewegen – Aqua Magic Management Support" className="absolute inset-0 -z-20 size-full object-cover object-center" />
       <div className="absolute inset-0 -z-10 bg-deep/75" />
       <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
         <p className="text-sm font-semibold uppercase mb-5">Business Coaching · Neu bei Aqua Magic</p>
