@@ -29,16 +29,9 @@ const services = [
 
 function ManagementSupport() {
   return <>
-    <section className="relative isolate overflow-hidden bg-deep text-primary-foreground">
-      <img src={heroImage} alt="Gemeinsam mehr bewegen – Aqua Magic Management Support" className="absolute inset-0 -z-20 size-full object-cover object-center" />
-      <div className="absolute inset-0 -z-10 bg-deep/75" />
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <p className="text-sm font-semibold uppercase mb-5">Business Coaching · Neu bei Aqua Magic</p>
-        <h1 className="max-w-3xl text-4xl md:text-6xl font-bold leading-tight">Aqua Magic<br /><span className="text-accent">Management Support</span></h1>
-        <p className="mt-6 max-w-2xl text-2xl md:text-3xl font-display font-semibold">Sie führen Ihr Bad.<br />Wir stärken Ihnen den Rücken!</p>
-        <p className="mt-5 max-w-xl text-lg text-primary-foreground/90">Ihre externe Management-Unterstützung für Schwimmbäder und Thermen.</p>
-        <Button asChild size="lg" className="mt-8 h-auto min-h-11 whitespace-normal bg-accent text-accent-foreground hover:bg-accent/90"><Link to="/unternehmen">Kennenlernen vereinbaren <ArrowRight /></Link></Button>
-      </div>
+    <section className="bg-white">
+      <h1 className="sr-only">Aqua Magic Management Support – Ihre externe Management-Unterstützung für Schwimmbäder und Thermen</h1>
+      <img src={heroImage} alt="Aqua Magic Management Support: Ihre externe Management-Unterstützung für Schwimmbäder und Thermen mit über 30 Jahren Branchenerfahrung" className="block h-auto w-full" />
     </section>
 
     <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
