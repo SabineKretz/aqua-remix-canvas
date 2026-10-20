@@ -78,22 +78,23 @@ function ManagementSupport() {
           <Button asChild variant="outline" className="w-full"><Link to="/unternehmen">Gespräch anfragen <ArrowRight /></Link></Button>
         </article>)}
       </div>
-      <div className="relative mt-16 overflow-hidden rounded-xl border border-border isolate">
-        <img src={wavesBackground} alt="" aria-hidden="true" className="absolute inset-0 -z-10 size-full object-cover" width={1920} height={768} />
-        <div className="py-8 md:py-12 flex justify-center px-6">
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button variant="ghost" className="group relative block h-auto w-full md:w-[70%] p-0 overflow-hidden rounded-lg shadow-soft" aria-label="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken! – vergrößern">
-                <img src={offerImage} alt="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" loading="lazy" className="w-full h-auto" />
-                <span className="absolute bottom-3 right-3 bg-background text-foreground p-2 rounded-full shadow-soft"><Expand className="size-5" /></span>
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-4xl max-h-[90dvh] overflow-y-auto">
-              <DialogTitle className="pr-8">Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!</DialogTitle>
-              <img src={offerImage} alt="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" className="w-full h-auto" />
-            </DialogContent>
-          </Dialog>
-        </div>
+    </section>
+
+    <section className="relative isolate overflow-hidden border-y border-border">
+      <img src={wavesBackground} alt="" aria-hidden="true" className="absolute inset-0 -z-10 size-full object-cover" width={1920} height={768} />
+      <div className="mx-auto flex max-w-7xl justify-center px-6 py-8 md:py-12">
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="ghost" className="group relative block h-auto w-full md:w-[70%] p-0 overflow-hidden rounded-lg shadow-soft" aria-label="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken! – vergrößern">
+              <img src={offerImage} alt="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" loading="lazy" className="w-full h-auto" />
+              <span className="absolute bottom-3 right-3 bg-background text-foreground p-2 rounded-full shadow-soft"><Expand className="size-5" /></span>
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="max-w-4xl max-h-[90dvh] overflow-y-auto">
+            <DialogTitle className="pr-8">Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!</DialogTitle>
+            <img src={offerImage} alt="Sie führen Ihr Bad. Wir stärken Ihnen den Rücken!" className="w-full h-auto" />
+          </DialogContent>
+        </Dialog>
       </div>
     </section>
 
