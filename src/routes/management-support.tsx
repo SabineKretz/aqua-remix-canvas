@@ -69,7 +69,7 @@ function ManagementSupport() {
       <h2 className="text-3xl md:text-4xl font-bold">Die passende Unterstützung für Ihr Haus.</h2>
       <p className="mt-5 text-xl text-muted-foreground">Bereits ab <span className="text-foreground font-semibold">490 € netto monatlich.</span></p>
       <div className="grid lg:grid-cols-3 gap-6 mt-10">
-        {managementPackages.map((offer, i) => <article key={offer.name} className={`rounded-lg border bg-card p-6 md:p-8 flex flex-col ${i === 1 ? "border-accent" : "border-border"}`}>
+        {managementPackages.map(offer => <article key={offer.name} className="rounded-lg border border-accent bg-card p-6 md:p-8 flex flex-col">
           <p className="text-sm text-muted-foreground mb-3">{offer.heading}</p>
           <h3 className="text-2xl font-bold">{offer.name}</h3>
           <p className="mt-6 text-sm text-muted-foreground">ab <span className="text-4xl font-display font-bold text-primary">{offer.price.toLocaleString("de-DE")} €</span></p>
