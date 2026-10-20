@@ -38,7 +38,8 @@ function ManagementSupport() {
       <div className="grid md:grid-cols-[3fr_2fr] gap-10 md:gap-16 items-start">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Verantwortung tragen.<br />Unterstützung gewinnen.</h2>
-          <p className="text-lg leading-relaxed text-muted-foreground">Personalführung, Kursplanung, Mitarbeiterentwicklung, Kundenbindung, Veranstaltungen und wirtschaftliche Ziele – als Badleitung tragen Sie täglich Verantwortung.</p>
+          <p className="text-lg leading-relaxed">Sie führen ein Schwimmbad, eine Therme oder ein Freizeitbad? Dann wissen Sie, wie vielseitig und anspruchsvoll diese Aufgabe ist.</p>
+          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">Personalführung, Kursplanung, Mitarbeiterentwicklung, Kundenbindung, Veranstaltungen und wirtschaftliche Ziele – als Badleitung tragen Sie täglich Verantwortung.</p>
           <p className="mt-5 text-lg leading-relaxed">Wie wertvoll wäre da eine erfahrene Unterstützung, die Ihre Branche versteht, mitdenkt und gemeinsam mit Ihnen neue Möglichkeiten entwickelt?</p>
         </div>
         <div className="border-l-4 border-accent pl-6">
