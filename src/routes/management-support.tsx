@@ -10,9 +10,9 @@ import wavesBackground from "@/assets/waves-background.jpg";
 export const Route = createFileRoute("/management-support")({
   head: () => ({ meta: [
     { title: "Management Support für Schwimmbäder & Thermen – Aqua Magic" },
-    { name: "description", content: "Externe Management-Unterstützung für Badleitungen: Personalführung, Kursplanung und Entwicklung mit über 30 Jahren Branchenerfahrung. Ab 390 € netto monatlich." },
+    { name: "description", content: "Externe Management-Unterstützung für Badleitungen: Personalführung, Kursplanung und Entwicklung mit über 30 Jahren Branchenerfahrung. Ab 490 € netto monatlich." },
     { property: "og:title", content: "Aqua Magic Management Support" },
-    { property: "og:description", content: "Sie führen Ihr Bad. Wir stärken Ihnen den Rücken! Praxisnahe Management-Unterstützung für Schwimmbäder und Thermen ab 390 € netto monatlich." },
+    { property: "og:description", content: "Sie führen Ihr Bad. Wir stärken Ihnen den Rücken! Praxisnahe Management-Unterstützung für Schwimmbäder und Thermen ab 490 € netto monatlich." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
   ] }),
@@ -67,7 +67,7 @@ function ManagementSupport() {
 
     <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
       <h2 className="text-3xl md:text-4xl font-bold">Die passende Unterstützung für Ihr Haus.</h2>
-      <p className="mt-5 text-xl text-muted-foreground">Bereits ab <span className="text-foreground font-semibold">390 € netto monatlich.</span></p>
+      <p className="mt-5 text-xl text-muted-foreground">Bereits ab <span className="text-foreground font-semibold">490 € netto monatlich.</span></p>
       <div className="grid lg:grid-cols-3 gap-6 mt-10">
         {managementPackages.map((offer, i) => <article key={offer.name} className={`rounded-lg border bg-card p-6 md:p-8 flex flex-col ${i === 1 ? "border-accent" : "border-border"}`}>
           <p className="text-sm text-muted-foreground mb-3">{offer.heading}</p>
