@@ -26,6 +26,60 @@ const benefits = [
   "Echter Kalorienkiller — Fitness mit Spaßfaktor",
 ];
 
+const sennfeldTerms = [
+  {
+    title: "Frühjahr 2027 · Kursstart: Montag, 11.01.2027",
+    dates: "11.01. / 18.01. / 25.01. / 01.02. / 15.02. / 22.02. / 01.03. / 08.03. / 15.03. / 05.04.2027",
+  },
+  {
+    title: "Special 2027 · Kursstart: Montag, 12.04.2027",
+    dates: "12.04. / 19.04. / 26.04. / 03.05. / 10.05.2027",
+  },
+  {
+    title: "Herbst 2027 · Kursstart: Montag, 20.09.2027",
+    dates: "20.09. / 27.09. / 04.10. / 11.10. / 18.10. / 25.10. / 08.11. / 15.11. / 22.11. / 29.11.2027",
+  },
+];
+
+const schwebheimTerms = [
+  {
+    title: "Frühjahr 2027 · Kursstart: Dienstag, 12.01.2027",
+    dates: "12.01. / 19.01. / 26.01. / 02.02. / 16.02. / 23.02. / 02.03. / 09.03. / 16.03. / 06.04.2027",
+  },
+  {
+    title: "Special 2027 · Kursstart: Dienstag, 13.04.2027",
+    dates: "13.04. / 20.04. / 27.04. / 04.05. / 11.05.2027",
+  },
+  {
+    title: "Herbst 2027 · Kursstart: Dienstag, 21.09.2027",
+    dates: "21.09. / 28.09. / 05.10. / 12.10. / 19.10. / 26.10. / 09.11. / 16.11. / 23.11. / 30.11.2027",
+  },
+  {
+    title: "Frühjahr 2027 · Kursstart: Freitag, 15.01.2027",
+    dates: "15.01. / 22.01. / 29.01. / 05.02. / 19.02. / 26.02. / 05.03. / 12.03. / 19.03. / 09.04.2027",
+  },
+  {
+    title: "Special 2027 · Kursstart: Freitag, 16.04.2027",
+    dates: "16.04. / 23.04. / 30.04. / 07.05. / 14.05.2027",
+  },
+  {
+    title: "Herbst 2027 · Kursstart: Freitag, 24.09.2027",
+    dates: "24.09. / 01.10. / 08.10. / 15.10. / 22.10. / 29.10. / 12.11. / 19.11. / 26.11. / 03.12.2027",
+  },
+];
+
+function Term({ title, dates }: { title: string; dates: string }) {
+  return (
+    <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+      <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
+      <div className="text-sm leading-relaxed">
+        <p className="font-semibold">{title}</p>
+        <p>{dates}</p>
+      </div>
+    </div>
+  );
+}
+
 function Page() {
   return (
     <>
@@ -75,7 +129,7 @@ function Page() {
           <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-8 md:p-10 flex flex-col gap-6">
             <div>
               <div className="text-xs tracking-widest uppercase opacity-80 mb-2">Standort</div>
-              <h3 className="text-2xl md:text-3xl font-bold">Sennfeld</h3>
+              <h3 className="text-2xl md:text-3xl font-bold">Familienbad Sennfeld</h3>
             </div>
 
             <div className="space-y-4">
@@ -88,21 +142,9 @@ function Page() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
-                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
-                <div className="text-sm leading-relaxed">
-                  <p className="font-semibold">Herbst 2026 · Kursstart: Montag, 21.09.2026</p>
-                  <p>21.09. / 28.09. / 05.10. / 12.10. / 19.10. / 26.10. / 09.11. / 16.11. / 23.11. / 30.11.2026</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
-                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
-                <div className="text-sm leading-relaxed">
-                  <p className="font-semibold">Frühjahr 2027 · Kursstart: Montag, 18.01.2027</p>
-                  <p>18.01. / 25.01. / 01.02. / 15.02. / 22.02. / 01.03. / 08.03. / 15.03. / 05.04. / 12.04.2027</p>
-                </div>
-              </div>
+              {sennfeldTerms.map((term) => (
+                <Term key={term.title} {...term} />
+              ))}
             </div>
 
             <Link to="/unternehmen" className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:brightness-110 transition">
@@ -114,7 +156,7 @@ function Page() {
           <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-8 md:p-10 flex flex-col gap-6">
             <div>
               <div className="text-xs tracking-widest uppercase opacity-80 mb-2">Standort</div>
-              <h3 className="text-2xl md:text-3xl font-bold">Schwebheim</h3>
+              <h3 className="text-2xl md:text-3xl font-bold">Hallenbad Schwebheim</h3>
             </div>
 
             <div className="space-y-4">
@@ -130,21 +172,9 @@ function Page() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
-                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
-                <div className="text-sm leading-relaxed">
-                  <p className="font-semibold">Herbst 2026 · Kursstart: Dienstag, 22.09.2026</p>
-                  <p>22.09. / 29.09. / 06.10. / 13.10. / 20.10. / 27.10. / 10.11. / 17.11. / 24.11. / 01.12.2026</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
-                <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
-                <div className="text-sm leading-relaxed">
-                  <p className="font-semibold">Herbst 2026 · Kursstart: Freitag, 18.09.2026</p>
-                  <p>18.09. / 25.09. / 02.10. / 09.10. / 16.10. / 23.10. / 30.10. / 13.11. / 20.11. / 27.11.2026</p>
-                </div>
-              </div>
+              {schwebheimTerms.map((term) => (
+                <Term key={term.title} {...term} />
+              ))}
             </div>
 
             <Link to="/unternehmen" className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-foreground font-semibold text-sm hover:brightness-110 transition">
