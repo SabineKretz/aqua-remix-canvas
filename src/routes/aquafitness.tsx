@@ -26,6 +26,60 @@ const benefits = [
   "Echter Kalorienkiller — Fitness mit Spaßfaktor",
 ];
 
+const sennfeldTerms = [
+  {
+    title: "Frühjahr 2027 · Kursstart: Montag, 11.01.2027",
+    dates: "11.01. / 18.01. / 25.01. / 01.02. / 15.02. / 22.02. / 01.03. / 08.03. / 15.03. / 05.04.2027",
+  },
+  {
+    title: "Special 2027 · Kursstart: Montag, 12.04.2027",
+    dates: "12.04. / 19.04. / 26.04. / 03.05. / 10.05.2027",
+  },
+  {
+    title: "Herbst 2027 · Kursstart: Montag, 20.09.2027",
+    dates: "20.09. / 27.09. / 04.10. / 11.10. / 18.10. / 25.10. / 08.11. / 15.11. / 22.11. / 29.11.2027",
+  },
+];
+
+const schwebheimTerms = [
+  {
+    title: "Frühjahr 2027 · Kursstart: Dienstag, 12.01.2027",
+    dates: "12.01. / 19.01. / 26.01. / 02.02. / 16.02. / 23.02. / 02.03. / 09.03. / 16.03. / 06.04.2027",
+  },
+  {
+    title: "Special 2027 · Kursstart: Dienstag, 13.04.2027",
+    dates: "13.04. / 20.04. / 27.04. / 04.05. / 11.05.2027",
+  },
+  {
+    title: "Herbst 2027 · Kursstart: Dienstag, 21.09.2027",
+    dates: "21.09. / 28.09. / 05.10. / 12.10. / 19.10. / 26.10. / 09.11. / 16.11. / 23.11. / 30.11.2027",
+  },
+  {
+    title: "Frühjahr 2027 · Kursstart: Freitag, 15.01.2027",
+    dates: "15.01. / 22.01. / 29.01. / 05.02. / 19.02. / 26.02. / 05.03. / 12.03. / 19.03. / 09.04.2027",
+  },
+  {
+    title: "Special 2027 · Kursstart: Freitag, 16.04.2027",
+    dates: "16.04. / 23.04. / 30.04. / 07.05. / 14.05.2027",
+  },
+  {
+    title: "Herbst 2027 · Kursstart: Freitag, 24.09.2027",
+    dates: "24.09. / 01.10. / 08.10. / 15.10. / 22.10. / 29.10. / 12.11. / 19.11. / 26.11. / 03.12.2027",
+  },
+];
+
+function Term({ title, dates }: { title: string; dates: string }) {
+  return (
+    <div className="flex items-start gap-3 p-3 rounded-2xl bg-primary-foreground/10 backdrop-blur">
+      <Calendar className="size-5 shrink-0 mt-0.5 text-accent" />
+      <div className="text-sm leading-relaxed">
+        <p className="font-semibold">{title}</p>
+        <p>{dates}</p>
+      </div>
+    </div>
+  );
+}
+
 function Page() {
   return (
     <>
